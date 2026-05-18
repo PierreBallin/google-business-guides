@@ -1,0 +1,186 @@
+import Link from 'next/link';
+import Head from 'next/head';
+
+const BRAND = 'Studio Lumière Mariage';
+const PHONE = '06 XX XX XX XX';
+const EMAIL = 'contact@studio-lumiere-mariage.fr';
+const BASE_URL = 'https://studio-lumiere-mariage.fr';
+
+const NAV = [
+  { href: '/tarifs-videaste-mariage', label: 'Formules & Tarifs' },
+  { href: '/videaste-mariage-ille-et-vilaine', label: '35 — Ille-et-Vilaine' },
+  { href: '/videaste-mariage-loire-atlantique', label: '44 — Loire-Atlantique' },
+  { href: '/videaste-mariage-morbihan', label: '56 — Morbihan' },
+];
+
+const FOOTER_DEPTS = [
+  { href: '/videaste-mariage-ille-et-vilaine', label: 'Vidéaste mariage Ille-et-Vilaine (35)' },
+  { href: '/videaste-mariage-loire-atlantique', label: 'Vidéaste mariage Loire-Atlantique (44)' },
+  { href: '/videaste-mariage-morbihan', label: 'Vidéaste mariage Morbihan (56)' },
+];
+
+const FOOTER_CITIES = [
+  { href: '/videaste-mariage-rennes', label: 'Vidéaste mariage Rennes' },
+  { href: '/videaste-mariage-nantes', label: 'Vidéaste mariage Nantes' },
+  { href: '/videaste-mariage-vannes', label: 'Vidéaste mariage Vannes' },
+  { href: '/videaste-mariage-saint-malo', label: 'Vidéaste mariage Saint-Malo' },
+  { href: '/videaste-mariage-lorient', label: 'Vidéaste mariage Lorient' },
+];
+
+const FOOTER_RESSOURCES = [
+  { href: '/tarifs-videaste-mariage', label: 'Formules & tarifs' },
+  { href: '/combien-coute-videaste-mariage', label: 'Combien coûte un vidéaste ?' },
+  { href: '/comment-choisir-videaste-mariage', label: 'Comment choisir son vidéaste ?' },
+];
+
+export { BRAND, PHONE, EMAIL, BASE_URL };
+
+export default function Layout({ children, title, description, canonical, schema }) {
+  const fullCanonical = canonical ? `${BASE_URL}${canonical}` : BASE_URL;
+
+  return (
+    <>
+      <Head>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href={fullCanonical} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={fullCanonical} />
+        <meta name="twitter:card" content="summary_large_image" />
+        {schema && (
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+          />
+        )}
+      </Head>
+
+      {/* Navigation */}
+      <nav style={{
+        background: 'rgba(8,8,8,0.96)',
+        borderBottom: '1px solid rgba(201,169,110,0.2)',
+        position: 'sticky',
+        top: 0,
+        zIndex: 100,
+        backdropFilter: 'blur(12px)',
+      }}>
+        <div style={{
+          maxWidth: '1200px',
+          margin: '0 auto',
+          padding: '0 20px',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+          height: '64px',
+          gap: '16px',
+        }}>
+          <Link href="/" style={{ flexShrink: 0 }}>
+            <span style={{ fontFamily: 'Georgia, serif', fontSize: '17px', color: '#c9a96e', fontWeight: '400', letterSpacing: '0.3px' }}>
+              Studio Lumière <span style={{ color: '#f5f0e8' }}>Mariage</span>
+            </span>
+          </Link>
+
+          <div style={{ display: 'flex', gap: '20px', alignItems: 'center', flexWrap: 'wrap' }}>
+            {NAV.map(link => (
+              <Link
+                key={link.href}
+                href={link.href}
+                style={{ color: '#9ca3af', fontSize: '13px', letterSpacing: '0.2px', transition: 'color 0.2s', whiteSpace: 'nowrap' }}
+                onMouseEnter={e => { e.currentTarget.style.color = '#c9a96e'; }}
+                onMouseLeave={e => { e.currentTarget.style.color = '#9ca3af'; }}
+              >
+                {link.label}
+              </Link>
+            ))}
+            <a
+              href="#contact"
+              style={{
+                background: 'linear-gradient(135deg, #c9a96e, #a07840)',
+                color: '#080808',
+                padding: '9px 20px',
+                borderRadius: '4px',
+                fontSize: '13px',
+                fontWeight: '700',
+                letterSpacing: '0.3px',
+                whiteSpace: 'nowrap',
+                flexShrink: 0,
+              }}
+            >
+              Demander un devis
+            </a>
+          </div>
+        </div>
+      </nav>
+
+      <main>{children}</main>
+
+      {/* Footer */}
+      <footer style={{ background: '#050505', borderTop: '1px solid rgba(201,169,110,0.12)', padding: '56px 20px 32px' }}>
+        <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '40px', marginBottom: '48px' }}>
+
+            <div>
+              <div style={{ fontSize: '17px', color: '#c9a96e', fontFamily: 'Georgia, serif', marginBottom: '14px' }}>Studio Lumière Mariage</div>
+              <p style={{ fontSize: '13px', color: '#6b7280', lineHeight: '1.8', marginBottom: '16px' }}>
+                Vidéaste mariage professionnel en Bretagne.<br />
+                Ille-et-Vilaine · Loire-Atlantique · Morbihan
+              </p>
+              <div style={{ fontSize: '13px', color: '#9ca3af', display: 'flex', flexDirection: 'column', gap: '6px' }}>
+                <span>📞 {PHONE}</span>
+                <span>✉️ {EMAIL}</span>
+              </div>
+            </div>
+
+            <div>
+              <div style={{ fontSize: '11px', letterSpacing: '2px', color: '#c9a96e', textTransform: 'uppercase', marginBottom: '14px', fontFamily: 'monospace' }}>Départements</div>
+              {FOOTER_DEPTS.map(l => (
+                <div key={l.href} style={{ marginBottom: '10px' }}>
+                  <Link href={l.href} style={{ color: '#6b7280', fontSize: '13px' }}
+                    onMouseEnter={e => { e.currentTarget.style.color = '#c9a96e'; }}
+                    onMouseLeave={e => { e.currentTarget.style.color = '#6b7280'; }}>
+                    {l.label}
+                  </Link>
+                </div>
+              ))}
+            </div>
+
+            <div>
+              <div style={{ fontSize: '11px', letterSpacing: '2px', color: '#c9a96e', textTransform: 'uppercase', marginBottom: '14px', fontFamily: 'monospace' }}>Villes</div>
+              {FOOTER_CITIES.map(l => (
+                <div key={l.href} style={{ marginBottom: '10px' }}>
+                  <Link href={l.href} style={{ color: '#6b7280', fontSize: '13px' }}
+                    onMouseEnter={e => { e.currentTarget.style.color = '#c9a96e'; }}
+                    onMouseLeave={e => { e.currentTarget.style.color = '#6b7280'; }}>
+                    {l.label}
+                  </Link>
+                </div>
+              ))}
+            </div>
+
+            <div>
+              <div style={{ fontSize: '11px', letterSpacing: '2px', color: '#c9a96e', textTransform: 'uppercase', marginBottom: '14px', fontFamily: 'monospace' }}>Ressources</div>
+              {FOOTER_RESSOURCES.map(l => (
+                <div key={l.href} style={{ marginBottom: '10px' }}>
+                  <Link href={l.href} style={{ color: '#6b7280', fontSize: '13px' }}
+                    onMouseEnter={e => { e.currentTarget.style.color = '#c9a96e'; }}
+                    onMouseLeave={e => { e.currentTarget.style.color = '#6b7280'; }}>
+                    {l.label}
+                  </Link>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div style={{ borderTop: '1px solid rgba(201,169,110,0.1)', paddingTop: '24px', textAlign: 'center', fontSize: '12px', color: '#374151' }}>
+            © 2026 Studio Lumière Mariage · Vidéaste mariage Bretagne (35, 44, 56) · Tous droits réservés
+          </div>
+        </div>
+      </footer>
+    </>
+  );
+}
