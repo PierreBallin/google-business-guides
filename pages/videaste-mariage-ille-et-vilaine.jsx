@@ -15,8 +15,8 @@ const schema = {
       '@type': 'LocalBusiness',
       name: 'Studio Lumière Mariage',
       description: 'Vidéaste mariage Ille-et-Vilaine (35). Films cinématographiques à Rennes, Saint-Malo, Fougères, Vitré, Dinard et partout dans le département.',
-      url: 'https://studio-lumiere-mariage.fr/videaste-mariage-ille-et-vilaine',
-      telephone: '+33600000000',
+      url: 'https://videaste-mariage-nantes-vannes.agence-dclik.fr/videaste-mariage-ille-et-vilaine',
+      telephone: '+33782739245',
       priceRange: '€€',
       areaServed: { '@type': 'AdministrativeArea', name: 'Ille-et-Vilaine' },
       address: { '@type': 'PostalAddress', addressLocality: 'Rennes', postalCode: '35000', addressCountry: 'FR' },
@@ -25,8 +25,8 @@ const schema = {
     {
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://studio-lumiere-mariage.fr' },
-        { '@type': 'ListItem', position: 2, name: 'Vidéaste mariage Ille-et-Vilaine', item: 'https://studio-lumiere-mariage.fr/videaste-mariage-ille-et-vilaine' },
+        { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://videaste-mariage-nantes-vannes.agence-dclik.fr' },
+        { '@type': 'ListItem', position: 2, name: 'Vidéaste mariage Ille-et-Vilaine', item: 'https://videaste-mariage-nantes-vannes.agence-dclik.fr/videaste-mariage-ille-et-vilaine' },
       ],
     },
   ],

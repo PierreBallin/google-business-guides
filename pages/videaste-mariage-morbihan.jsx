@@ -15,8 +15,8 @@ const schema = {
       '@type': 'LocalBusiness',
       name: 'Studio Lumière Mariage',
       description: 'Vidéaste mariage Morbihan (56). Films cinématographiques à Vannes, Lorient, Auray, Quiberon, Carnac et dans tout le département.',
-      url: 'https://studio-lumiere-mariage.fr/videaste-mariage-morbihan',
-      telephone: '+33600000000',
+      url: 'https://videaste-mariage-nantes-vannes.agence-dclik.fr/videaste-mariage-morbihan',
+      telephone: '+33782739245',
       priceRange: '€€',
       areaServed: { '@type': 'AdministrativeArea', name: 'Morbihan' },
       address: { '@type': 'PostalAddress', addressLocality: 'Vannes', postalCode: '56000', addressCountry: 'FR' },
@@ -25,8 +25,8 @@ const schema = {
     {
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://studio-lumiere-mariage.fr' },
-        { '@type': 'ListItem', position: 2, name: 'Vidéaste mariage Morbihan', item: 'https://studio-lumiere-mariage.fr/videaste-mariage-morbihan' },
+        { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://videaste-mariage-nantes-vannes.agence-dclik.fr' },
+        { '@type': 'ListItem', position: 2, name: 'Vidéaste mariage Morbihan', item: 'https://videaste-mariage-nantes-vannes.agence-dclik.fr/videaste-mariage-morbihan' },
       ],
     },
   ],

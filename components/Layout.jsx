@@ -4,7 +4,7 @@ import Head from 'next/head';
 const BRAND = 'Mariage Bretagne Films';
 const PHONE = '+33 7 82 73 92 45';
 const EMAIL = 'contact@agence-dclik.fr';
-const BASE_URL = 'https://mariage-44-56.agence-dclik.fr';
+const BASE_URL = 'https://videaste-mariage-nantes-vannes.agence-dclik.fr';
 
 const NAV = [
   { href: '/tarifs-videaste-mariage', label: 'Formules & Tarifs' },

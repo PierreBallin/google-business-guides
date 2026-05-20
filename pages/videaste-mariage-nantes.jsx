@@ -15,8 +15,8 @@ const schema = {
       '@type': 'LocalBusiness',
       name: 'Studio Lumière Mariage',
       description: 'Vidéaste mariage Nantes. Films de mariage cinématographiques à Nantes et en Loire-Atlantique. Château des Ducs, vignobles, lofts de l\'Île de Nantes.',
-      url: 'https://studio-lumiere-mariage.fr/videaste-mariage-nantes',
-      telephone: '+33600000000',
+      url: 'https://videaste-mariage-nantes-vannes.agence-dclik.fr/videaste-mariage-nantes',
+      telephone: '+33782739245',
       priceRange: '€€',
       areaServed: { '@type': 'City', name: 'Nantes' },
       address: { '@type': 'PostalAddress', addressLocality: 'Nantes', postalCode: '44000', addressCountry: 'FR' },
@@ -25,9 +25,9 @@ const schema = {
     {
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://studio-lumiere-mariage.fr' },
-        { '@type': 'ListItem', position: 2, name: 'Loire-Atlantique (44)', item: 'https://studio-lumiere-mariage.fr/videaste-mariage-loire-atlantique' },
-        { '@type': 'ListItem', position: 3, name: 'Vidéaste mariage Nantes', item: 'https://studio-lumiere-mariage.fr/videaste-mariage-nantes' },
+        { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://videaste-mariage-nantes-vannes.agence-dclik.fr' },
+        { '@type': 'ListItem', position: 2, name: 'Loire-Atlantique (44)', item: 'https://videaste-mariage-nantes-vannes.agence-dclik.fr/videaste-mariage-loire-atlantique' },
+        { '@type': 'ListItem', position: 3, name: 'Vidéaste mariage Nantes', item: 'https://videaste-mariage-nantes-vannes.agence-dclik.fr/videaste-mariage-nantes' },
       ],
     },
   ],

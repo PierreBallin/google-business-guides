@@ -15,8 +15,8 @@ const schema = {
       '@type': 'LocalBusiness',
       name: 'Studio Lumière Mariage',
       description: 'Vidéaste mariage Vannes. Films cinématographiques à Vannes, Golfe du Morbihan, presqu\'île de Rhuys. Spécialiste du 56.',
-      url: 'https://studio-lumiere-mariage.fr/videaste-mariage-vannes',
-      telephone: '+33600000000',
+      url: 'https://videaste-mariage-nantes-vannes.agence-dclik.fr/videaste-mariage-vannes',
+      telephone: '+33782739245',
       priceRange: '€€',
       areaServed: { '@type': 'City', name: 'Vannes' },
       address: { '@type': 'PostalAddress', addressLocality: 'Vannes', postalCode: '56000', addressCountry: 'FR' },
@@ -25,9 +25,9 @@ const schema = {
     {
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://studio-lumiere-mariage.fr' },
-        { '@type': 'ListItem', position: 2, name: 'Morbihan (56)', item: 'https://studio-lumiere-mariage.fr/videaste-mariage-morbihan' },
-        { '@type': 'ListItem', position: 3, name: 'Vidéaste mariage Vannes', item: 'https://studio-lumiere-mariage.fr/videaste-mariage-vannes' },
+        { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://videaste-mariage-nantes-vannes.agence-dclik.fr' },
+        { '@type': 'ListItem', position: 2, name: 'Morbihan (56)', item: 'https://videaste-mariage-nantes-vannes.agence-dclik.fr/videaste-mariage-morbihan' },
+        { '@type': 'ListItem', position: 3, name: 'Vidéaste mariage Vannes', item: 'https://videaste-mariage-nantes-vannes.agence-dclik.fr/videaste-mariage-vannes' },
       ],
     },
   ],

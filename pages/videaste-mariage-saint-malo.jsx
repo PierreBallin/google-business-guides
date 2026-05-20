@@ -15,8 +15,8 @@ const schema = {
       '@type': 'LocalBusiness',
       name: 'Studio Lumière Mariage',
       description: 'Vidéaste mariage Saint-Malo. Films cinématographiques dans la cité corsaire : intra-muros, plages du Sillon, Dinard, Côte d\'Émeraude.',
-      url: 'https://studio-lumiere-mariage.fr/videaste-mariage-saint-malo',
-      telephone: '+33600000000',
+      url: 'https://videaste-mariage-nantes-vannes.agence-dclik.fr/videaste-mariage-saint-malo',
+      telephone: '+33782739245',
       priceRange: '€€',
       areaServed: { '@type': 'City', name: 'Saint-Malo' },
       address: { '@type': 'PostalAddress', addressLocality: 'Saint-Malo', postalCode: '35400', addressCountry: 'FR' },
@@ -25,9 +25,9 @@ const schema = {
     {
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://studio-lumiere-mariage.fr' },
-        { '@type': 'ListItem', position: 2, name: 'Ille-et-Vilaine (35)', item: 'https://studio-lumiere-mariage.fr/videaste-mariage-ille-et-vilaine' },
-        { '@type': 'ListItem', position: 3, name: 'Vidéaste mariage Saint-Malo', item: 'https://studio-lumiere-mariage.fr/videaste-mariage-saint-malo' },
+        { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://videaste-mariage-nantes-vannes.agence-dclik.fr' },
+        { '@type': 'ListItem', position: 2, name: 'Ille-et-Vilaine (35)', item: 'https://videaste-mariage-nantes-vannes.agence-dclik.fr/videaste-mariage-ille-et-vilaine' },
+        { '@type': 'ListItem', position: 3, name: 'Vidéaste mariage Saint-Malo', item: 'https://videaste-mariage-nantes-vannes.agence-dclik.fr/videaste-mariage-saint-malo' },
       ],
     },
   ],

@@ -11,10 +11,10 @@ const BORDER = 'rgba(201,169,110,0.2)';
 const schema = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
-  '@id': 'https://mariage-44-56.agence-dclik.fr',
+  '@id': 'https://videaste-mariage-nantes-vannes.agence-dclik.fr',
   name: 'Mariage Bretagne Films',
   description: 'Vidéaste mariage professionnel en Bretagne. Films cinématographiques dans l\'Ille-et-Vilaine (35), la Loire-Atlantique (44) et le Morbihan (56).',
-  url: 'https://mariage-44-56.agence-dclik.fr',
+  url: 'https://videaste-mariage-nantes-vannes.agence-dclik.fr',
   telephone: '+33782739245',
   email: 'contact@agence-dclik.fr',
   priceRange: '€€',

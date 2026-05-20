@@ -15,8 +15,8 @@ const schema = {
       '@type': 'LocalBusiness',
       name: 'Studio Lumière Mariage',
       description: 'Vidéaste mariage Loire-Atlantique (44). Films cinématographiques à Nantes, La Baule, Guérande, Saint-Nazaire, Pornic et partout dans le département.',
-      url: 'https://studio-lumiere-mariage.fr/videaste-mariage-loire-atlantique',
-      telephone: '+33600000000',
+      url: 'https://videaste-mariage-nantes-vannes.agence-dclik.fr/videaste-mariage-loire-atlantique',
+      telephone: '+33782739245',
       priceRange: '€€',
       areaServed: { '@type': 'AdministrativeArea', name: 'Loire-Atlantique' },
       address: { '@type': 'PostalAddress', addressLocality: 'Nantes', postalCode: '44000', addressCountry: 'FR' },
@@ -25,8 +25,8 @@ const schema = {
     {
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://studio-lumiere-mariage.fr' },
-        { '@type': 'ListItem', position: 2, name: 'Vidéaste mariage Loire-Atlantique', item: 'https://studio-lumiere-mariage.fr/videaste-mariage-loire-atlantique' },
+        { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://videaste-mariage-nantes-vannes.agence-dclik.fr' },
+        { '@type': 'ListItem', position: 2, name: 'Vidéaste mariage Loire-Atlantique', item: 'https://videaste-mariage-nantes-vannes.agence-dclik.fr/videaste-mariage-loire-atlantique' },
       ],
     },
   ],

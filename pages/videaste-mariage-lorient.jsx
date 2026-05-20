@@ -15,8 +15,8 @@ const schema = {
       '@type': 'LocalBusiness',
       name: 'Studio Lumière Mariage',
       description: 'Vidéaste mariage Lorient. Films cinématographiques à Lorient, Groix, côte des Mégalithes, Hennebont, Pont-Scorff et dans le Morbihan.',
-      url: 'https://studio-lumiere-mariage.fr/videaste-mariage-lorient',
-      telephone: '+33600000000',
+      url: 'https://videaste-mariage-nantes-vannes.agence-dclik.fr/videaste-mariage-lorient',
+      telephone: '+33782739245',
       priceRange: '€€',
       areaServed: { '@type': 'City', name: 'Lorient' },
       address: { '@type': 'PostalAddress', addressLocality: 'Lorient', postalCode: '56100', addressCountry: 'FR' },
@@ -25,9 +25,9 @@ const schema = {
     {
       '@type': 'BreadcrumbList',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://studio-lumiere-mariage.fr' },
-        { '@type': 'ListItem', position: 2, name: 'Morbihan (56)', item: 'https://studio-lumiere-mariage.fr/videaste-mariage-morbihan' },
-        { '@type': 'ListItem', position: 3, name: 'Vidéaste mariage Lorient', item: 'https://studio-lumiere-mariage.fr/videaste-mariage-lorient' },
+        { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://videaste-mariage-nantes-vannes.agence-dclik.fr' },
+        { '@type': 'ListItem', position: 2, name: 'Morbihan (56)', item: 'https://videaste-mariage-nantes-vannes.agence-dclik.fr/videaste-mariage-morbihan' },
+        { '@type': 'ListItem', position: 3, name: 'Vidéaste mariage Lorient', item: 'https://videaste-mariage-nantes-vannes.agence-dclik.fr/videaste-mariage-lorient' },
       ],
     },
   ],
