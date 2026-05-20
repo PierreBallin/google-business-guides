@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Layout from '../components/Layout';
+import QuickContactForm from '../components/QuickContactForm';
 
 const GOLD = '#c9a96e';
 const CREAM = '#f5f0e8';
@@ -162,14 +163,7 @@ export default function SaintMalo() {
           <p style={{ fontSize: '15px', color: GRAY, marginBottom: '32px', lineHeight: '1.7' }}>
             Indiquez votre date et le lieu envisagé. Réponse garantie sous 24h.
           </p>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '14px', maxWidth: '420px', margin: '0 auto 24px' }}>
-            <input placeholder="Votre email" type="email" style={{ background: '#111', border: `1px solid ${BORDER}`, borderRadius: '6px', padding: '14px 16px', color: CREAM, fontSize: '14px', fontFamily: 'Georgia, serif', outline: 'none' }} />
-            <input placeholder="Date & lieu (intra-muros, plage, Dinard…)" style={{ background: '#111', border: `1px solid ${BORDER}`, borderRadius: '6px', padding: '14px 16px', color: CREAM, fontSize: '14px', fontFamily: 'Georgia, serif', outline: 'none' }} />
-            <button style={{ background: 'linear-gradient(135deg, #c9a96e, #a07840)', color: '#080808', padding: '15px', borderRadius: '6px', fontSize: '15px', fontWeight: '700', border: 'none', cursor: 'pointer' }}>
-              Vérifier ma disponibilité
-            </button>
-          </div>
-          <p style={{ fontSize: '13px', color: '#4b5563' }}>contact@studio-lumiere-mariage.fr · 06 XX XX XX XX</p>
+          <QuickContactForm locationHint="Saint-Malo (35)" />
         </div>
       </section>
     </Layout>

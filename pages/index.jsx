@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Layout from '../components/Layout';
+import QuickContactForm from '../components/QuickContactForm';
 
 const GOLD = '#c9a96e';
 const CREAM = '#f5f0e8';
@@ -10,12 +11,12 @@ const BORDER = 'rgba(201,169,110,0.2)';
 const schema = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
-  '@id': 'https://studio-lumiere-mariage.fr',
-  name: 'Studio Lumière Mariage',
+  '@id': 'https://mariage-44-56.agence-dclik.fr',
+  name: 'Mariage Bretagne Films',
   description: 'Vidéaste mariage professionnel en Bretagne. Films cinématographiques dans l\'Ille-et-Vilaine (35), la Loire-Atlantique (44) et le Morbihan (56).',
-  url: 'https://studio-lumiere-mariage.fr',
-  telephone: '+33600000000',
-  email: 'contact@studio-lumiere-mariage.fr',
+  url: 'https://mariage-44-56.agence-dclik.fr',
+  telephone: '+33782739245',
+  email: 'contact@agence-dclik.fr',
   priceRange: '€€',
   currenciesAccepted: 'EUR',
   openingHours: 'Mo-Sa 09:00-19:00',
@@ -100,7 +101,7 @@ const DEPTS = [
 export default function Home() {
   return (
     <Layout
-      title="Vidéaste Mariage Bretagne | Studio Lumière Mariage — 35, 44, 56"
+      title="Vidéaste Mariage Bretagne | Mariage Bretagne Films — 35, 44, 56"
       description="Vidéaste mariage professionnel en Bretagne. Films cinématographiques dans l'Ille-et-Vilaine (35), Loire-Atlantique (44) et Morbihan (56). Formules de 890€ à 1790€. Devis gratuit."
       canonical="/"
       schema={schema}
@@ -234,6 +235,33 @@ export default function Home() {
         </div>
       </section>
 
+      {/* GALERIE PHOTOS */}
+      <section style={{ padding: '80px 20px', maxWidth: '1100px', margin: '0 auto' }}>
+        <div style={{ textAlign: 'center', marginBottom: '48px' }}>
+          <div style={{ fontSize: '11px', letterSpacing: '3px', color: GOLD, textTransform: 'uppercase', fontFamily: 'monospace', marginBottom: '12px' }}>Nos réalisations</div>
+          <h2 style={{ fontSize: 'clamp(24px, 4vw, 38px)', fontWeight: '400', color: CREAM, lineHeight: '1.3' }}>Extraits de films de mariage en Bretagne</h2>
+          <p style={{ fontSize: '14px', color: GRAY, marginTop: '12px', maxWidth: '480px', margin: '12px auto 0' }}>Chaque film est unique, comme chaque couple. Voici un aperçu de notre univers cinématographique.</p>
+        </div>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '16px' }}>
+          {[
+            { label: 'Cérémonie en château — Ille-et-Vilaine (35)', ratio: '56%' },
+            { label: 'Vignobles du Muscadet — Loire-Atlantique (44)', ratio: '56%' },
+            { label: 'Coucher de soleil — Golfe du Morbihan (56)', ratio: '56%' },
+            { label: 'Préparatifs de la mariée — Nantes', ratio: '56%' },
+            { label: 'Vin d\'honneur au bord de mer — Saint-Malo', ratio: '56%' },
+            { label: 'Première danse — Vannes', ratio: '56%' },
+          ].map((item, i) => (
+            <div key={i} style={{ position: 'relative', paddingBottom: item.ratio, background: CARD_BG, border: `1px dashed rgba(201,169,110,0.25)`, borderRadius: '8px', overflow: 'hidden' }}>
+              <div style={{ position: 'absolute', inset: 0, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '10px', padding: '20px' }}>
+                <div style={{ fontSize: '28px', opacity: 0.3 }}>🎬</div>
+                <span style={{ fontSize: '12px', color: 'rgba(201,169,110,0.5)', textAlign: 'center', lineHeight: '1.5', letterSpacing: '0.3px' }}>{item.label}</span>
+                <span style={{ fontSize: '10px', color: '#374151', fontFamily: 'monospace', letterSpacing: '1px', textTransform: 'uppercase' }}>Photo à venir</span>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* TÉMOIGNAGES */}
       <section style={{ background: '#0a0a0a', padding: '80px 20px', borderTop: '1px solid rgba(201,169,110,0.1)' }}>
         <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
@@ -307,20 +335,7 @@ export default function Home() {
           <p style={{ fontSize: '16px', color: GRAY, marginBottom: '40px', lineHeight: '1.7' }}>
             Envoyez-nous votre date et le lieu envisagé. Réponse garantie sous 24h pour vérifier la disponibilité et vous envoyer une proposition sur mesure.
           </p>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '20px', maxWidth: '480px', margin: '0 auto 32px' }}>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px' }}>
-              <input placeholder="Votre prénom" style={{ background: '#111', border: `1px solid ${BORDER}`, borderRadius: '6px', padding: '14px 16px', color: CREAM, fontSize: '14px', fontFamily: 'Georgia, serif', outline: 'none', width: '100%' }} />
-              <input placeholder="Prénom partenaire" style={{ background: '#111', border: `1px solid ${BORDER}`, borderRadius: '6px', padding: '14px 16px', color: CREAM, fontSize: '14px', fontFamily: 'Georgia, serif', outline: 'none', width: '100%' }} />
-            </div>
-            <input placeholder="Votre email" type="email" style={{ background: '#111', border: `1px solid ${BORDER}`, borderRadius: '6px', padding: '14px 16px', color: CREAM, fontSize: '14px', fontFamily: 'Georgia, serif', outline: 'none', width: '100%' }} />
-            <input placeholder="Date de mariage (ex: 14 juin 2026)" style={{ background: '#111', border: `1px solid ${BORDER}`, borderRadius: '6px', padding: '14px 16px', color: CREAM, fontSize: '14px', fontFamily: 'Georgia, serif', outline: 'none', width: '100%' }} />
-            <input placeholder="Lieu de réception (commune, salle ou domaine)" style={{ background: '#111', border: `1px solid ${BORDER}`, borderRadius: '6px', padding: '14px 16px', color: CREAM, fontSize: '14px', fontFamily: 'Georgia, serif', outline: 'none', width: '100%' }} />
-            <textarea placeholder="Dites-nous ce que vous avez en tête..." rows={4} style={{ background: '#111', border: `1px solid ${BORDER}`, borderRadius: '6px', padding: '14px 16px', color: CREAM, fontSize: '14px', fontFamily: 'Georgia, serif', outline: 'none', resize: 'vertical', width: '100%' }} />
-            <button style={{ background: 'linear-gradient(135deg, #c9a96e, #a07840)', color: '#080808', padding: '16px', borderRadius: '6px', fontSize: '16px', fontWeight: '700', border: 'none', cursor: 'pointer', letterSpacing: '0.3px' }}>
-              Vérifier ma disponibilité
-            </button>
-          </div>
-          <p style={{ fontSize: '13px', color: '#4b5563' }}>Ou contactez-nous directement : <span style={{ color: GOLD }}>contact@studio-lumiere-mariage.fr</span></p>
+          <QuickContactForm />
         </div>
       </section>
     </Layout>
