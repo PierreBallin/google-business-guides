@@ -1,10 +1,10 @@
 import Link from 'next/link';
 import Head from 'next/head';
 
-const BRAND = 'Studio Lumière Mariage';
-const PHONE = '06 XX XX XX XX';
-const EMAIL = 'contact@studio-lumiere-mariage.fr';
-const BASE_URL = 'https://studio-lumiere-mariage.fr';
+const BRAND = 'Mariage Bretagne Films';
+const PHONE = '+33 7 82 73 92 45';
+const EMAIL = 'contact@agence-dclik.fr';
+const BASE_URL = 'https://mariage-44-56.agence-dclik.fr';
 
 const NAV = [
   { href: '/tarifs-videaste-mariage', label: 'Formules & Tarifs' },
@@ -81,7 +81,7 @@ export default function Layout({ children, title, description, canonical, schema
         }}>
           <Link href="/" style={{ flexShrink: 0 }}>
             <span style={{ fontFamily: 'Georgia, serif', fontSize: '17px', color: '#c9a96e', fontWeight: '400', letterSpacing: '0.3px' }}>
-              Studio Lumière <span style={{ color: '#f5f0e8' }}>Mariage</span>
+              Mariage Bretagne <span style={{ color: '#f5f0e8' }}>Films</span>
             </span>
           </Link>
 
@@ -125,7 +125,7 @@ export default function Layout({ children, title, description, canonical, schema
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '40px', marginBottom: '48px' }}>
 
             <div>
-              <div style={{ fontSize: '17px', color: '#c9a96e', fontFamily: 'Georgia, serif', marginBottom: '14px' }}>Studio Lumière Mariage</div>
+              <div style={{ fontSize: '17px', color: '#c9a96e', fontFamily: 'Georgia, serif', marginBottom: '14px' }}>Mariage Bretagne Films</div>
               <p style={{ fontSize: '13px', color: '#6b7280', lineHeight: '1.8', marginBottom: '16px' }}>
                 Vidéaste mariage professionnel en Bretagne.<br />
                 Ille-et-Vilaine · Loire-Atlantique · Morbihan
@@ -177,7 +177,7 @@ export default function Layout({ children, title, description, canonical, schema
           </div>
 
           <div style={{ borderTop: '1px solid rgba(201,169,110,0.1)', paddingTop: '24px', textAlign: 'center', fontSize: '12px', color: '#374151' }}>
-            © 2026 Studio Lumière Mariage · Vidéaste mariage Bretagne (35, 44, 56) · Tous droits réservés
+            © 2026 Mariage Bretagne Films · Vidéaste mariage Bretagne (35, 44, 56) · Tous droits réservés
           </div>
         </div>
       </footer>
