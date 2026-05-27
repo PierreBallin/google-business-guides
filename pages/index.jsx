@@ -255,9 +255,9 @@ export default function Home() {
             { src: '/images/hero/hero-mariage-bretagne.webp', alt: 'Film de mariage cinématographique en Bretagne — Mariage Bretagne Films', label: 'Film mariage — Bretagne' },
             { src: '/images/hero/hero-mariage-nantes.webp', alt: 'Vidéaste mariage Nantes — film cinématographique Loire-Atlantique (44)', label: 'Mariage — Nantes (44)' },
             { src: '/images/hero/hero-mariage-vannes.webp', alt: 'Vidéaste mariage Vannes — Golfe du Morbihan (56)', label: 'Mariage — Vannes (56)' },
-            { src: '/images/galerie/film-mariage-rennes-chateau.jpg', alt: 'Film de mariage en château breton — Ille-et-Vilaine (35)', label: 'Château breton — Ille-et-Vilaine (35)' },
-            { src: '/images/galerie/mariage-bretagne-vin-honneur.jpg', alt: 'Vin d\'honneur filmé en Bretagne — vidéaste mariage 35 44 56', label: 'Vin d\'honneur — Bretagne' },
-            { src: '/images/galerie/film-mariage-lorient-premiere-danse.jpg', alt: 'Film de mariage à Lorient — première danse Morbihan (56)', label: 'Première danse — Lorient (56)' },
+            { src: '/images/hero/hero-mariage-ille-et-vilaine.webp', alt: 'Vidéaste mariage Ille-et-Vilaine — film cinématographique château breton (35)', label: 'Mariage — Ille-et-Vilaine (35)' },
+            { src: '/images/hero/hero-mariage-loire-atlantique.webp', alt: 'Vidéaste mariage Loire-Atlantique — film cinématographique Nantes (44)', label: 'Mariage — Loire-Atlantique (44)' },
+            { src: '/images/hero/hero-mariage-morbihan.webp', alt: 'Vidéaste mariage Morbihan — film cinématographique Golfe du Morbihan (56)', label: 'Mariage — Morbihan (56)' },
           ].map((item, i) => (
             <div key={i} style={{ position: 'relative', paddingBottom: '66%', borderRadius: '8px', overflow: 'hidden', background: CARD_BG }}>
               <img
