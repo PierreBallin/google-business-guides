@@ -46,6 +46,7 @@ export default function Layout({ children, title, description, canonical, schema
         <title>{title}</title>
         <meta name="description" content={description} />
         <meta name="robots" content="index, follow" />
+        <meta name="google-site-verification" content="hDlbAAF7ErMhG1u1RgEYwKKcsOJIGZJOxpFhPiDeVMk" />
         <link rel="canonical" href={fullCanonical} />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
