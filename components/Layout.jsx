@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import Link from 'next/link';
 import Head from 'next/head';
 
@@ -23,8 +24,6 @@ const FOOTER_CITIES = [
   { href: '/videaste-mariage-rennes', label: 'Vidéaste mariage Rennes' },
   { href: '/videaste-mariage-nantes', label: 'Vidéaste mariage Nantes' },
   { href: '/videaste-mariage-vannes', label: 'Vidéaste mariage Vannes' },
-  { href: '/videaste-mariage-saint-malo', label: 'Vidéaste mariage Saint-Malo' },
-  { href: '/videaste-mariage-lorient', label: 'Vidéaste mariage Lorient' },
 ];
 
 const FOOTER_RESSOURCES = [
@@ -36,6 +35,7 @@ const FOOTER_RESSOURCES = [
 export { BRAND, PHONE, EMAIL, BASE_URL };
 
 export default function Layout({ children, title, description, canonical, schema }) {
+  const [menuOpen, setMenuOpen] = useState(false);
   const fullCanonical = canonical ? `${BASE_URL}${canonical}` : BASE_URL;
 
   return (
@@ -61,59 +61,67 @@ export default function Layout({ children, title, description, canonical, schema
       </Head>
 
       {/* Navigation */}
-      <nav style={{
-        background: 'rgba(8,8,8,0.96)',
-        borderBottom: '1px solid rgba(201,169,110,0.2)',
-        position: 'sticky',
-        top: 0,
-        zIndex: 100,
-        backdropFilter: 'blur(12px)',
-      }}>
-        <div style={{
-          maxWidth: '1200px',
-          margin: '0 auto',
-          padding: '0 20px',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'space-between',
-          height: '64px',
-          gap: '16px',
-        }}>
-          <Link href="/" style={{ flexShrink: 0 }}>
+      <nav style={{ background: 'rgba(8,8,8,0.96)', borderBottom: '1px solid rgba(201,169,110,0.2)', position: 'sticky', top: 0, zIndex: 100, backdropFilter: 'blur(12px)' }}>
+        <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 20px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: '64px' }}>
+
+          {/* Logo */}
+          <Link href="/" style={{ flexShrink: 0 }} onClick={() => setMenuOpen(false)}>
             <span style={{ fontFamily: 'Georgia, serif', fontSize: '17px', color: '#c9a96e', fontWeight: '400', letterSpacing: '0.3px' }}>
               Mariage Bretagne <span style={{ color: '#f5f0e8' }}>Films</span>
             </span>
           </Link>
 
-          <div style={{ display: 'flex', gap: '20px', alignItems: 'center', flexWrap: 'wrap' }}>
+          {/* Desktop nav links */}
+          <div className="nav-links">
             {NAV.map(link => (
               <Link
                 key={link.href}
                 href={link.href}
-                style={{ color: '#9ca3af', fontSize: '13px', letterSpacing: '0.2px', transition: 'color 0.2s', whiteSpace: 'nowrap' }}
+                style={{ color: '#9ca3af', fontSize: '13px', letterSpacing: '0.2px', whiteSpace: 'nowrap' }}
                 onMouseEnter={e => { e.currentTarget.style.color = '#c9a96e'; }}
                 onMouseLeave={e => { e.currentTarget.style.color = '#9ca3af'; }}
               >
                 {link.label}
               </Link>
             ))}
-            <a
-              href="#contact"
-              style={{
-                background: 'linear-gradient(135deg, #c9a96e, #a07840)',
-                color: '#080808',
-                padding: '9px 20px',
-                borderRadius: '4px',
-                fontSize: '13px',
-                fontWeight: '700',
-                letterSpacing: '0.3px',
-                whiteSpace: 'nowrap',
-                flexShrink: 0,
-              }}
-            >
+            <a href="#contact" className="nav-cta-desktop" style={{ background: 'linear-gradient(135deg, #c9a96e, #a07840)', color: '#080808', padding: '9px 20px', borderRadius: '4px', fontSize: '13px', fontWeight: '700', whiteSpace: 'nowrap' }}>
               Demander un devis
             </a>
           </div>
+
+          {/* Mobile right side: CTA + hamburger */}
+          <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+            <a href="#contact" className="nav-cta-mobile" onClick={() => setMenuOpen(false)} style={{ background: 'linear-gradient(135deg, #c9a96e, #a07840)', color: '#080808', padding: '8px 14px', borderRadius: '4px', fontSize: '13px', fontWeight: '700', whiteSpace: 'nowrap' }}>
+              Devis
+            </a>
+            <button className="hamburger-btn" onClick={() => setMenuOpen(o => !o)} aria-label="Menu">
+              {menuOpen
+                ? <span style={{ fontSize: '22px', lineHeight: 1 }}>✕</span>
+                : <span style={{ fontSize: '22px', lineHeight: 1 }}>☰</span>
+              }
+            </button>
+          </div>
+        </div>
+
+        {/* Mobile dropdown */}
+        <div className={`nav-mobile-menu${menuOpen ? ' open' : ''}`}>
+          {NAV.map(link => (
+            <Link
+              key={link.href}
+              href={link.href}
+              onClick={() => setMenuOpen(false)}
+              style={{ color: '#9ca3af', fontSize: '15px', padding: '12px 0', borderBottom: '1px solid rgba(201,169,110,0.08)', display: 'block' }}
+            >
+              {link.label}
+            </Link>
+          ))}
+          <a
+            href="#contact"
+            onClick={() => setMenuOpen(false)}
+            style={{ display: 'block', marginTop: '14px', background: 'linear-gradient(135deg, #c9a96e, #a07840)', color: '#080808', padding: '13px', borderRadius: '4px', fontSize: '15px', fontWeight: '700', textAlign: 'center' }}
+          >
+            Demander un devis gratuit
+          </a>
         </div>
       </nav>
 
@@ -131,8 +139,8 @@ export default function Layout({ children, title, description, canonical, schema
                 Ille-et-Vilaine · Loire-Atlantique · Morbihan
               </p>
               <div style={{ fontSize: '13px', color: '#9ca3af', display: 'flex', flexDirection: 'column', gap: '6px' }}>
-                <span>📞 {PHONE}</span>
-                <span>✉️ {EMAIL}</span>
+                <a href={`tel:${PHONE.replace(/\s/g, '')}`} style={{ color: '#9ca3af' }}>📞 {PHONE}</a>
+                <a href={`mailto:${EMAIL}`} style={{ color: '#9ca3af' }}>✉️ {EMAIL}</a>
               </div>
             </div>
 

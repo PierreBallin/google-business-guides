@@ -151,9 +151,6 @@ export default function Rennes() {
           <Link href="/videaste-mariage-ille-et-vilaine">
             <div style={{ background: CARD_BG, border: `1px solid ${BORDER}`, borderRadius: '8px', padding: '16px 24px', fontSize: '14px', color: GRAY, cursor: 'pointer' }}>← Tous les mariages en Ille-et-Vilaine (35)</div>
           </Link>
-          <Link href="/videaste-mariage-saint-malo">
-            <div style={{ background: CARD_BG, border: `1px solid ${BORDER}`, borderRadius: '8px', padding: '16px 24px', fontSize: '14px', color: GRAY, cursor: 'pointer' }}>Vidéaste mariage Saint-Malo →</div>
-          </Link>
         </div>
       </section>
 

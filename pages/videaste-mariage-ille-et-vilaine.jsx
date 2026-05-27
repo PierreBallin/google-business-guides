@@ -34,7 +34,7 @@ const schema = {
 
 const CITIES_35 = [
   { href: '/videaste-mariage-rennes', name: 'Rennes', tag: 'Capitale bretonne' },
-  { href: '/videaste-mariage-saint-malo', name: 'Saint-Malo', tag: 'Cité corsaire' },
+  { name: 'Saint-Malo', tag: 'Cité corsaire' },
   { name: 'Fougères', tag: 'Château médiéval' },
   { name: 'Vitré', tag: 'Cité de caractère' },
   { name: 'Dinard', tag: 'Côte d\'Émeraude' },

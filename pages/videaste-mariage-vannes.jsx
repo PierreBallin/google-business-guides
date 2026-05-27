@@ -139,9 +139,6 @@ export default function Vannes() {
         <Link href="/videaste-mariage-morbihan">
           <div style={{ background: CARD_BG, border: `1px solid ${BORDER}`, borderRadius: '8px', padding: '16px 24px', fontSize: '14px', color: GRAY, cursor: 'pointer' }}>← Tous les mariages dans le Morbihan (56)</div>
         </Link>
-        <Link href="/videaste-mariage-lorient">
-          <div style={{ background: CARD_BG, border: `1px solid ${BORDER}`, borderRadius: '8px', padding: '16px 24px', fontSize: '14px', color: GRAY, cursor: 'pointer' }}>Vidéaste mariage Lorient →</div>
-        </Link>
       </section>
 
       {/* CONTACT */}
