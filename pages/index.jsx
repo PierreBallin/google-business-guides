@@ -82,7 +82,7 @@ const PROCESS = [
 const FORMULES = [
   { name: 'Essentielle', price: '890', duration: '1 cadreur · 4 min de highlights', included: ['Film highlights 4 min', 'Cérémonie complète', 'Montage professionnel', 'Musique licenciée', 'Livraison en 8 semaines'] },
   { name: 'Prestige', price: '1 290', duration: '1 cadreur · Film 5 min + intégral', popular: true, included: ['Film highlights 5 min', 'Film intégral (cérémonie + vin d\'honneur)', 'Cérémonie complète', 'Montage cinématographique', '2 musiques licenciées', 'Livraison en 6 semaines', 'Clé USB gravée offerte'] },
-  { name: 'Cinéma', price: '1 790', duration: '2 cadreurs · Film 7 min + intégral', included: ['Film cinématographique 7 min', 'Film intégral (journée complète)', '2 cadreurs (angles multiples)', 'Drone (selon autorisation)', 'Son ambiance professionnel', 'Séquence préparatifs', 'Livraison en 6 semaines', 'Clé USB + tirage poster'] },
+  { name: 'Cinéma', price: '1 790', duration: 'Journée complète · Film 7 min + intégral', included: ['Film cinématographique 7 min', 'Film intégral (journée complète)', 'Présence de A à Z (préparatifs → soirée)', 'Drone (selon autorisation)', 'Son ambiance professionnel', 'Séquence préparatifs incluse', 'Livraison en 6 semaines', 'Clé USB + tirage poster'] },
 ];
 
 const REASSURANCES = [

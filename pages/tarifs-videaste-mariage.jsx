@@ -15,7 +15,7 @@ const schema = {
     {
       '@type': 'Question',
       name: 'Combien coûte un vidéaste mariage en Bretagne ?',
-      acceptedAnswer: { '@type': 'Answer', text: 'Nos formules vont de 890 € (Essentielle, 1 cadreur, film 4 min) à 1790 € (Cinéma, 2 cadreurs, drone, film 7 min). Un devis personnalisé est toujours gratuit.' },
+      acceptedAnswer: { '@type': 'Answer', text: 'Nos formules vont de 890 € (Essentielle, film 4 min) à 1790 € (Cinéma, drone, journée complète, film 7 min). Un devis personnalisé est toujours gratuit.' },
     },
     {
       '@type': 'Question',
@@ -49,7 +49,6 @@ const FORMULES = [
     ],
     non: [
       'Film intégral de la journée',
-      '2ème cadreur',
       'Drone',
       'Clé USB',
     ],
@@ -74,7 +73,6 @@ const FORMULES = [
       'Contrat signé + acompte sécurisé',
     ],
     non: [
-      '2ème cadreur',
       'Drone',
     ],
   },
@@ -82,13 +80,13 @@ const FORMULES = [
     name: 'Cinéma',
     price: '1 790',
     accroche: 'L\'expérience cinématographique ultime',
-    cadreurs: '2 cadreurs',
+    cadreurs: '1 cadreur',
     film: 'Film 7 min + film intégral complet',
     livraison: '6 semaines',
     items: [
       'Film cinématographique 7 min',
       'Film intégral de toute la journée',
-      '2 cadreurs (angles multiples)',
+      'Présence de A à Z (préparatifs → soirée)',
       'Drone (selon autorisations)',
       'Son ambiance professionnel',
       'Séquence préparatifs incluse',
@@ -104,12 +102,11 @@ const FORMULES = [
     name: 'Sur mesure',
     price: 'Sur devis',
     accroche: 'Un mariage hors-norme mérite une formule unique',
-    cadreurs: 'Multi-cadreurs',
+    cadreurs: 'Sur mesure',
     film: 'Format sur mesure',
     livraison: 'À définir',
     items: [
       'Formule entièrement personnalisée',
-      'Multi-cadreurs selon les besoins',
       'Durée de présence adaptée',
       'Courts-métrages et format long',
       'Drone systématique',
@@ -124,7 +121,7 @@ const FORMULES = [
 const COMPARAISON = [
   { label: 'Film highlights', ess: '4 min', pre: '5 min', cin: '7 min', sur: 'Sur mesure' },
   { label: 'Film intégral', ess: '—', pre: 'Cérémonie + vin d\'honneur', cin: 'Journée complète', sur: 'Sur mesure' },
-  { label: 'Cadreurs', ess: '1', pre: '1', cin: '2', sur: '2+' },
+  { label: 'Présence', ess: 'Cérémonie + réception', pre: 'Cérémonie + vin d\'honneur', cin: 'Journée complète (12h)', sur: 'Sur mesure' },
   { label: 'Drone', ess: '—', pre: '—', cin: '✓', sur: '✓' },
   { label: 'Clé USB', ess: '—', pre: '✓', cin: '✓ + poster', sur: '✓' },
   { label: 'Délai livraison', ess: '8 semaines', pre: '6 semaines', cin: '6 semaines', sur: 'À définir' },
