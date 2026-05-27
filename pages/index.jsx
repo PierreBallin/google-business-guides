@@ -107,28 +107,36 @@ export default function Home() {
       schema={schema}
     >
       {/* HERO */}
-      <section style={{ background: 'linear-gradient(160deg, #0a0808 0%, #080808 60%, #0a0a05 100%)', padding: '100px 20px 90px', textAlign: 'center', borderBottom: '1px solid rgba(201,169,110,0.1)' }}>
-        <div style={{ maxWidth: '860px', margin: '0 auto' }}>
-          <div style={{ display: 'inline-block', background: 'rgba(201,169,110,0.12)', border: '1px solid rgba(201,169,110,0.3)', padding: '5px 16px', borderRadius: '20px', fontSize: '11px', fontFamily: 'monospace', letterSpacing: '2px', color: GOLD, marginBottom: '28px', textTransform: 'uppercase' }}>
-            Ille-et-Vilaine · Loire-Atlantique · Morbihan
-          </div>
-          <h1 style={{ fontSize: 'clamp(34px, 6vw, 64px)', fontWeight: '400', color: CREAM, margin: '0 0 16px', lineHeight: '1.2', letterSpacing: '-0.5px' }}>
-            Vidéaste Mariage en{' '}
-            <span style={{ color: GOLD, fontStyle: 'italic' }}>Bretagne</span>
-          </h1>
-          <p style={{ fontSize: 'clamp(16px, 2.5vw, 22px)', color: GRAY, margin: '0 0 12px', fontStyle: 'italic', lineHeight: '1.5' }}>
-            Votre histoire. Filmée pour toujours.
-          </p>
-          <p style={{ fontSize: '16px', color: '#6b7280', maxWidth: '600px', margin: '0 auto 40px', lineHeight: '1.7' }}>
-            Nous créons des films de mariage cinématographiques qui transmettent l'émotion exacte du moment — des frissons de la préparation aux larmes de joie sur la piste de danse.
-          </p>
-          <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
-            <a href="#contact" style={{ background: 'linear-gradient(135deg, #c9a96e, #a07840)', color: '#080808', padding: '16px 36px', borderRadius: '4px', fontSize: '16px', fontWeight: '700', letterSpacing: '0.3px' }}>
-              Demander un devis gratuit
-            </a>
-            <Link href="/tarifs-videaste-mariage" style={{ border: '1px solid rgba(201,169,110,0.4)', color: GOLD, padding: '16px 32px', borderRadius: '4px', fontSize: '15px' }}>
-              Voir les formules
-            </Link>
+      <section style={{ position: 'relative', overflow: 'hidden', borderBottom: '1px solid rgba(201,169,110,0.1)' }}>
+        <img
+          src="/images/hero/hero-mariage-bretagne.webp"
+          alt="Film de mariage cinématographique en Bretagne — Mariage Bretagne Films"
+          style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', zIndex: 0 }}
+        />
+        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(160deg, rgba(8,6,6,0.82) 0%, rgba(8,8,8,0.75) 60%, rgba(8,8,5,0.85) 100%)', zIndex: 1 }} />
+        <div style={{ position: 'relative', zIndex: 2, padding: '110px 20px 100px', textAlign: 'center' }}>
+          <div style={{ maxWidth: '860px', margin: '0 auto' }}>
+            <div style={{ display: 'inline-block', background: 'rgba(201,169,110,0.12)', border: '1px solid rgba(201,169,110,0.3)', padding: '5px 16px', borderRadius: '20px', fontSize: '11px', fontFamily: 'monospace', letterSpacing: '2px', color: GOLD, marginBottom: '28px', textTransform: 'uppercase' }}>
+              Ille-et-Vilaine · Loire-Atlantique · Morbihan
+            </div>
+            <h1 style={{ fontSize: 'clamp(34px, 6vw, 64px)', fontWeight: '400', color: CREAM, margin: '0 0 16px', lineHeight: '1.2', letterSpacing: '-0.5px' }}>
+              Vidéaste Mariage en{' '}
+              <span style={{ color: GOLD, fontStyle: 'italic' }}>Bretagne</span>
+            </h1>
+            <p style={{ fontSize: 'clamp(16px, 2.5vw, 22px)', color: GRAY, margin: '0 0 12px', fontStyle: 'italic', lineHeight: '1.5' }}>
+              Votre histoire. Filmée pour toujours.
+            </p>
+            <p style={{ fontSize: '16px', color: '#9ca3af', maxWidth: '600px', margin: '0 auto 40px', lineHeight: '1.7' }}>
+              Nous créons des films de mariage cinématographiques qui transmettent l'émotion exacte du moment — des frissons de la préparation aux larmes de joie sur la piste de danse.
+            </p>
+            <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
+              <a href="#contact" style={{ background: 'linear-gradient(135deg, #c9a96e, #a07840)', color: '#080808', padding: '16px 36px', borderRadius: '4px', fontSize: '16px', fontWeight: '700', letterSpacing: '0.3px' }}>
+                Demander un devis gratuit
+              </a>
+              <Link href="/tarifs-videaste-mariage" style={{ border: '1px solid rgba(201,169,110,0.4)', color: GOLD, padding: '16px 32px', borderRadius: '4px', fontSize: '15px' }}>
+                Voir les formules
+              </Link>
+            </div>
           </div>
         </div>
       </section>
@@ -244,10 +252,10 @@ export default function Home() {
         </div>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '16px' }}>
           {[
-            { src: '/images/galerie/videaste-mariage-nantes-ceremonie-exterieure.jpg', alt: 'Vidéaste mariage Nantes — cérémonie extérieure Loire-Atlantique (44)', label: 'Cérémonie — Nantes (44)' },
-            { src: '/images/galerie/videaste-mariage-vannes-golfe-morbihan.jpg', alt: 'Vidéaste mariage Vannes — coucher de soleil Golfe du Morbihan (56)', label: 'Coucher de soleil — Golfe du Morbihan (56)' },
+            { src: '/images/hero/hero-mariage-bretagne.webp', alt: 'Film de mariage cinématographique en Bretagne — Mariage Bretagne Films', label: 'Film mariage — Bretagne' },
+            { src: '/images/hero/hero-mariage-nantes.webp', alt: 'Vidéaste mariage Nantes — film cinématographique Loire-Atlantique (44)', label: 'Mariage — Nantes (44)' },
+            { src: '/images/hero/hero-mariage-vannes.webp', alt: 'Vidéaste mariage Vannes — Golfe du Morbihan (56)', label: 'Mariage — Vannes (56)' },
             { src: '/images/galerie/film-mariage-rennes-chateau.jpg', alt: 'Film de mariage en château breton — Ille-et-Vilaine (35)', label: 'Château breton — Ille-et-Vilaine (35)' },
-            { src: '/images/galerie/videaste-mariage-saint-malo-remparts.jpg', alt: 'Vidéaste mariage Saint-Malo — remparts cité corsaire', label: 'Remparts — Saint-Malo (35)' },
             { src: '/images/galerie/mariage-bretagne-vin-honneur.jpg', alt: 'Vin d\'honneur filmé en Bretagne — vidéaste mariage 35 44 56', label: 'Vin d\'honneur — Bretagne' },
             { src: '/images/galerie/film-mariage-lorient-premiere-danse.jpg', alt: 'Film de mariage à Lorient — première danse Morbihan (56)', label: 'Première danse — Lorient (56)' },
           ].map((item, i) => (

@@ -52,7 +52,10 @@ export default function Vannes() {
       schema={schema}
     >
       {/* HERO */}
-      <section style={{ background: 'linear-gradient(160deg, #0a0808 0%, #080808 100%)', padding: '80px 20px 70px', borderBottom: '1px solid rgba(201,169,110,0.1)' }}>
+      <section style={{ position: 'relative', overflow: 'hidden', borderBottom: '1px solid rgba(201,169,110,0.1)' }}>
+        <img src="/images/hero/hero-mariage-vannes.webp" alt="Vidéaste mariage Vannes — Golfe du Morbihan (56)" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', zIndex: 0 }} />
+        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(160deg, rgba(8,6,6,0.85) 0%, rgba(8,8,8,0.78) 100%)', zIndex: 1 }} />
+        <div style={{ position: 'relative', zIndex: 2, padding: '90px 20px 80px' }}>
         <div style={{ maxWidth: '860px', margin: '0 auto' }}>
           <nav style={{ fontSize: '13px', color: '#6b7280', marginBottom: '32px' }}>
             <Link href="/" style={{ color: GOLD }}>Accueil</Link>
@@ -79,6 +82,7 @@ export default function Vannes() {
               Voir les formules
             </Link>
           </div>
+        </div>
         </div>
       </section>
 
