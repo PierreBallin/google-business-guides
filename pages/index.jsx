@@ -244,18 +244,23 @@ export default function Home() {
         </div>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '16px' }}>
           {[
-            { label: 'Cérémonie en château — Ille-et-Vilaine (35)', ratio: '56%' },
-            { label: 'Vignobles du Muscadet — Loire-Atlantique (44)', ratio: '56%' },
-            { label: 'Coucher de soleil — Golfe du Morbihan (56)', ratio: '56%' },
-            { label: 'Préparatifs de la mariée — Nantes', ratio: '56%' },
-            { label: 'Vin d\'honneur au bord de mer — Saint-Malo', ratio: '56%' },
-            { label: 'Première danse — Vannes', ratio: '56%' },
+            { src: '/images/galerie/videaste-mariage-nantes-ceremonie-exterieure.jpg', alt: 'Vidéaste mariage Nantes — cérémonie extérieure Loire-Atlantique (44)', label: 'Cérémonie — Nantes (44)' },
+            { src: '/images/galerie/videaste-mariage-vannes-golfe-morbihan.jpg', alt: 'Vidéaste mariage Vannes — coucher de soleil Golfe du Morbihan (56)', label: 'Coucher de soleil — Golfe du Morbihan (56)' },
+            { src: '/images/galerie/film-mariage-rennes-chateau.jpg', alt: 'Film de mariage en château breton — Ille-et-Vilaine (35)', label: 'Château breton — Ille-et-Vilaine (35)' },
+            { src: '/images/galerie/videaste-mariage-saint-malo-remparts.jpg', alt: 'Vidéaste mariage Saint-Malo — remparts cité corsaire', label: 'Remparts — Saint-Malo (35)' },
+            { src: '/images/galerie/mariage-bretagne-vin-honneur.jpg', alt: 'Vin d\'honneur filmé en Bretagne — vidéaste mariage 35 44 56', label: 'Vin d\'honneur — Bretagne' },
+            { src: '/images/galerie/film-mariage-lorient-premiere-danse.jpg', alt: 'Film de mariage à Lorient — première danse Morbihan (56)', label: 'Première danse — Lorient (56)' },
           ].map((item, i) => (
-            <div key={i} style={{ position: 'relative', paddingBottom: item.ratio, background: CARD_BG, border: `1px dashed rgba(201,169,110,0.25)`, borderRadius: '8px', overflow: 'hidden' }}>
-              <div style={{ position: 'absolute', inset: 0, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '10px', padding: '20px' }}>
-                <div style={{ fontSize: '28px', opacity: 0.3 }}>🎬</div>
-                <span style={{ fontSize: '12px', color: 'rgba(201,169,110,0.5)', textAlign: 'center', lineHeight: '1.5', letterSpacing: '0.3px' }}>{item.label}</span>
-                <span style={{ fontSize: '10px', color: '#374151', fontFamily: 'monospace', letterSpacing: '1px', textTransform: 'uppercase' }}>Photo à venir</span>
+            <div key={i} style={{ position: 'relative', paddingBottom: '66%', borderRadius: '8px', overflow: 'hidden', background: CARD_BG }}>
+              <img
+                src={item.src}
+                alt={item.alt}
+                loading="lazy"
+                style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                onError={e => { e.currentTarget.parentElement.style.border = '1px dashed rgba(201,169,110,0.25)'; e.currentTarget.style.display = 'none'; e.currentTarget.parentElement.innerHTML += `<div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;padding:20px"><span style="font-size:28px;opacity:0.2">🎬</span><span style="font-size:11px;color:rgba(201,169,110,0.4);text-align:center">${item.label}</span></div>`; }}
+              />
+              <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, background: 'linear-gradient(transparent, rgba(0,0,0,0.7))', padding: '24px 16px 14px' }}>
+                <span style={{ fontSize: '12px', color: 'rgba(245,240,232,0.85)', letterSpacing: '0.3px' }}>{item.label}</span>
               </div>
             </div>
           ))}
