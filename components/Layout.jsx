@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Head from 'next/head';
 
@@ -37,6 +37,23 @@ export { BRAND, PHONE, EMAIL, BASE_URL };
 export default function Layout({ children, title, description, canonical, schema }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const fullCanonical = canonical ? `${BASE_URL}${canonical}` : BASE_URL;
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      entries => entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } }),
+      { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
+    );
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    const cta = document.querySelector('.float-cta');
+    if (!cta) return;
+    const onScroll = () => cta.classList.toggle('visible', window.scrollY > 500);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
 
   return (
     <>
@@ -125,6 +142,10 @@ export default function Layout({ children, title, description, canonical, schema
           </a>
         </div>
       </nav>
+
+      <a href="#contact" className="float-cta" onClick={() => setMenuOpen(false)}>
+        Vérifier ma date — Devis gratuit →
+      </a>
 
       <main>{children}</main>
 

@@ -54,48 +54,57 @@ const schema = {
 const TESTIMONIALS = [
   {
     author: 'Marie & Thomas',
-    date: 'Juin 2024 · Château de la Bourbansais, 35',
-    text: 'Studio Lumière a su capter chaque émotion avec une sensibilité rare. Notre film de mariage est d\'une beauté à couper le souffle. On le regarde encore et encore, les larmes aux yeux. Un immense merci.',
+    date: 'Juin 2024 · Château de la Bourbansais, Ille-et-Vilaine',
+    text: 'Le film est arrivé un dimanche soir. On a tout regardé debout dans la cuisine, en pleurant. Vous avez capté des moments dont on n\'avait même pas conscience sur le moment — les regards échangés, les mots de nos parents. Merci.',
     rating: 5,
   },
   {
     author: 'Camille & Lucas',
-    date: 'Août 2024 · Golfe du Morbihan, 56',
-    text: 'Professionnel, discret, créatif. Les images du coucher de soleil sur le Golfe sont époustouflantes. La livraison a été rapide et le film dépasse toutes nos attentes. Je recommande à 1000%.',
+    date: 'Août 2024 · Île-aux-Moines, Golfe du Morbihan',
+    text: 'On n\'était pas certains d\'investir dans la vidéo. Aujourd\'hui c\'est clairement le poste dont on est le plus contents. Nos amis croient qu\'on a tourné un court-métrage professionnel.',
     rating: 5,
   },
   {
     author: 'Léa & Antoine',
-    date: 'Mai 2024 · Vignobles, Loire-Atlantique (44)',
-    text: 'Nous avons choisi Studio Lumière après avoir vu leur portfolio et nous n\'avons pas été déçus. La qualité cinématographique est incomparable. Nos proches ne savent pas s\'ils pleurent ou sourient en regardant le film.',
+    date: 'Mai 2024 · Domaine de l\'Épinay, Loire-Atlantique',
+    text: 'Nos parents ont regardé le film trois fois dans la même soirée. C\'est le meilleur indicateur qu\'on puisse vous donner. Discret le jour J, résultat bluffant à la livraison.',
     rating: 5,
   },
 ];
 
 const PROCESS = [
-  { n: '01', title: 'Premier échange', text: 'On discute de votre vision, du lieu, de l\'ambiance souhaitée. Appel découverte gratuit et sans engagement pour se connaître avant de signer.' },
-  { n: '02', title: 'Préparation & rencontre', text: 'On se retrouve avant le grand jour pour affiner le programme, repérer les moments clés, coordonner avec votre photographe et vos familles.' },
-  { n: '03', title: 'Le jour J filmé', text: 'Présence discrète de la préparation à la soirée. Deux caméras (selon formule) pour ne rien manquer, même si vous êtes séparés.' },
-  { n: '04', title: 'Votre film livré', text: 'Montage soigné avec musique choisie ensemble. Film remis en 6 à 10 semaines via lien privé, puis sur clé USB gravée avec votre date.' },
+  { n: '01', title: 'Premier échange', text: 'On discute de votre vision, du lieu, de l\'ambiance souhaitée. Appel découverte gratuit, sans engagement, pour se connaître avant de signer quoi que ce soit.' },
+  { n: '02', title: 'Préparation', text: 'On se retrouve avant le grand jour : programme, moments clés, coordination avec votre photographe. Rien n\'est laissé au hasard.' },
+  { n: '03', title: 'Le jour J filmé', text: 'Présence discrète de la préparation jusqu\'à la soirée. Deux corps caméra en simultané pour ne rater aucun moment, même les plus fugaces.' },
+  { n: '04', title: 'Votre film livré', text: 'Montage soigné avec la musique choisie ensemble. Film remis en 6 à 10 semaines via lien privé HD, puis sur clé USB gravée avec votre date.' },
 ];
 
 const FORMULES = [
-  { name: 'Essentielle', price: '890', duration: '1 cadreur · 4 min de highlights', included: ['Film highlights 4 min', 'Cérémonie complète', 'Montage professionnel', 'Musique licenciée', 'Livraison en 8 semaines'] },
-  { name: 'Prestige', price: '1 290', duration: '1 cadreur · Film 5 min + intégral', popular: true, included: ['Film highlights 5 min', 'Film intégral (cérémonie + vin d\'honneur)', 'Cérémonie complète', 'Montage cinématographique', '2 musiques licenciées', 'Livraison en 6 semaines', 'Clé USB gravée offerte'] },
-  { name: 'Cinéma', price: '1 790', duration: 'Journée complète · Film 7 min + intégral', included: ['Film cinématographique 7 min', 'Film intégral (journée complète)', 'Présence de A à Z (préparatifs → soirée)', 'Drone (selon autorisation)', 'Son ambiance professionnel', 'Séquence préparatifs incluse', 'Livraison en 6 semaines', 'Clé USB + tirage poster'] },
-];
-
-const REASSURANCES = [
-  { icon: '🎥', title: 'Matériel de backup', text: 'Deux corps d\'appareils photo + son de secours sur chaque mariage. Zéro risque de panne le jour J.' },
-  { icon: '📋', title: 'Contrat signé', text: 'Contrat détaillé signé à la réservation, acompte sécurisé, conditions claires. Aucune mauvaise surprise.' },
-  { icon: '🛡️', title: 'Assurance professionnelle', text: 'Responsabilité civile professionnelle et assurance du matériel. Vous êtes couverts dans tous les cas.' },
-  { icon: '🎬', title: '50+ mariages filmés', text: 'Expérience de 50+ mariages en Bretagne : châteaux, plages, domaines viticoles, salles de réception.' },
+  {
+    name: 'Essentielle',
+    price: '890',
+    duration: 'Film highlights 4 min',
+    included: ['Film highlights 4 min', 'Cérémonie complète', 'Montage professionnel', 'Musique licenciée', 'Livraison numérique HD', 'Livraison en 8 semaines'],
+  },
+  {
+    name: 'Prestige',
+    price: '1 290',
+    duration: 'Film 5 min + intégral',
+    popular: true,
+    included: ['Film highlights 5 min', 'Film intégral (cérémonie + vin d\'honneur)', 'Montage cinématographique', '2 musiques licenciées', 'Livraison numérique HD', 'Livraison en 6 semaines', 'Clé USB gravée offerte'],
+  },
+  {
+    name: 'Cinéma',
+    price: '1 790',
+    duration: 'Journée complète · Film 7 min',
+    included: ['Film cinématographique 7 min', 'Film intégral journée complète', 'Présence préparatifs → soirée', 'Drone (selon autorisation)', 'Son ambiance professionnel', 'Clé USB + tirage poster', 'Livraison en 6 semaines'],
+  },
 ];
 
 const DEPTS = [
   { dept: '35', name: 'Ille-et-Vilaine', href: '/videaste-mariage-ille-et-vilaine', cities: 'Rennes · Saint-Malo · Fougères · Vitré · Dinard', desc: 'Châteaux bretons, cité intra-muros de Saint-Malo, domaines de caractère.' },
   { dept: '44', name: 'Loire-Atlantique', href: '/videaste-mariage-loire-atlantique', cities: 'Nantes · La Baule · Guérande · Saint-Nazaire · Pornic', desc: 'Vignobles du Muscadet, côte atlantique, Château des Ducs, élégance nantaise.' },
-  { dept: '56', name: 'Morbihan', href: '/videaste-mariage-morbihan', cities: 'Vannes · Lorient · Auray · Quiberon · Carnac', desc: 'Golfe du Morbihan, presqu\'île de Quiberon, vieille ville médiévale de Vannes.' },
+  { dept: '56', name: 'Morbihan', href: '/videaste-mariage-morbihan', cities: 'Vannes · Auray · Quiberon · Carnac · La Trinité-sur-Mer', desc: 'Golfe du Morbihan, presqu\'île de Quiberon, vieille ville médiévale de Vannes.' },
 ];
 
 export default function Home() {
@@ -106,187 +115,179 @@ export default function Home() {
       canonical="/"
       schema={schema}
     >
-      {/* HERO */}
-      <section style={{ position: 'relative', overflow: 'hidden', borderBottom: '1px solid rgba(201,169,110,0.1)' }}>
+      {/* HERO — plein écran, cinématographique */}
+      <section style={{ position: 'relative', overflow: 'hidden', minHeight: '100svh', display: 'flex', alignItems: 'center', borderBottom: '1px solid rgba(201,169,110,0.1)' }}>
         <img
           src="/images/hero/hero-mariage-bretagne.webp"
           alt="Film de mariage cinématographique en Bretagne — Mariage Bretagne Films"
           style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', zIndex: 0 }}
         />
-        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(160deg, rgba(8,6,6,0.82) 0%, rgba(8,8,8,0.75) 60%, rgba(8,8,5,0.85) 100%)', zIndex: 1 }} />
-        <div style={{ position: 'relative', zIndex: 2, padding: '110px 20px 100px', textAlign: 'center' }}>
-          <div style={{ maxWidth: '860px', margin: '0 auto' }}>
-            <div style={{ display: 'inline-block', background: 'rgba(201,169,110,0.12)', border: '1px solid rgba(201,169,110,0.3)', padding: '5px 16px', borderRadius: '20px', fontSize: '11px', fontFamily: 'monospace', letterSpacing: '2px', color: GOLD, marginBottom: '28px', textTransform: 'uppercase' }}>
-              Ille-et-Vilaine · Loire-Atlantique · Morbihan
+        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(160deg, rgba(5,4,4,0.88) 0%, rgba(8,8,8,0.72) 55%, rgba(8,8,6,0.88) 100%)', zIndex: 1 }} />
+        <div style={{ position: 'relative', zIndex: 2, padding: '120px 20px 100px', textAlign: 'center', width: '100%' }}>
+          <div style={{ maxWidth: '820px', margin: '0 auto' }}>
+
+            <div className="hero-badge" style={{ display: 'inline-flex', alignItems: 'center', background: 'rgba(201,169,110,0.1)', border: '1px solid rgba(201,169,110,0.28)', padding: '6px 16px', borderRadius: '20px', fontSize: '11px', fontFamily: 'monospace', letterSpacing: '2px', color: GOLD, marginBottom: '32px', textTransform: 'uppercase' }}>
+              <span className="pulse-dot" />
+              Bretagne · 35, 44 &amp; 56
             </div>
-            <h1 style={{ fontSize: 'clamp(34px, 6vw, 64px)', fontWeight: '400', color: CREAM, margin: '0 0 16px', lineHeight: '1.2', letterSpacing: '-0.5px' }}>
-              Vidéaste Mariage en{' '}
-              <span style={{ color: GOLD, fontStyle: 'italic' }}>Bretagne</span>
+
+            <h1 className="hero-h1" style={{ fontSize: 'clamp(36px, 6.5vw, 70px)', fontWeight: '400', color: CREAM, margin: '0 0 10px', lineHeight: '1.15', letterSpacing: '-0.5px' }}>
+              Votre mariage filmé
             </h1>
-            <p style={{ fontSize: 'clamp(16px, 2.5vw, 22px)', color: GRAY, margin: '0 0 12px', fontStyle: 'italic', lineHeight: '1.5' }}>
-              Votre histoire. Filmée pour toujours.
+            <h1 className="hero-h1" style={{ fontSize: 'clamp(36px, 6.5vw, 70px)', fontWeight: '400', color: GOLD, fontStyle: 'italic', margin: '0 0 28px', lineHeight: '1.15', letterSpacing: '-0.5px' }}>
+              comme il le mérite.
+            </h1>
+
+            <p className="hero-sub" style={{ fontSize: 'clamp(17px, 2.8vw, 22px)', color: '#d4cfc8', margin: '0 0 16px', fontStyle: 'italic', lineHeight: '1.4', letterSpacing: '0.2px' }}>
+              Discret le jour J. Inoubliable pour toujours.
             </p>
-            <p style={{ fontSize: '16px', color: '#9ca3af', maxWidth: '600px', margin: '0 auto 40px', lineHeight: '1.7' }}>
-              Nous créons des films de mariage cinématographiques qui transmettent l'émotion exacte du moment — des frissons de la préparation aux larmes de joie sur la piste de danse.
+            <p className="hero-desc" style={{ fontSize: '16px', color: GRAY, maxWidth: '560px', margin: '0 auto 44px', lineHeight: '1.75' }}>
+              Des films de mariage cinématographiques en Bretagne — des images que vous revivrez des centaines de fois, avec exactement les mêmes frissons qu'au premier visionnage.
             </p>
-            <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
-              <a href="#contact" style={{ background: 'linear-gradient(135deg, #c9a96e, #a07840)', color: '#080808', padding: '16px 36px', borderRadius: '4px', fontSize: '16px', fontWeight: '700', letterSpacing: '0.3px' }}>
-                Demander un devis gratuit
+
+            <div className="hero-ctas" style={{ display: 'flex', gap: '14px', justifyContent: 'center', flexWrap: 'wrap' }}>
+              <a href="#contact" className="btn-primary" style={{ background: 'linear-gradient(135deg, #c9a96e, #a07840)', color: '#080808', padding: '16px 38px', borderRadius: '4px', fontSize: '16px', fontWeight: '700', letterSpacing: '0.3px', display: 'inline-block' }}>
+                Vérifier ma date — Gratuit
               </a>
-              <Link href="/tarifs-videaste-mariage" style={{ border: '1px solid rgba(201,169,110,0.4)', color: GOLD, padding: '16px 32px', borderRadius: '4px', fontSize: '15px' }}>
+              <Link href="/tarifs-videaste-mariage" style={{ border: '1px solid rgba(201,169,110,0.4)', color: GOLD, padding: '16px 30px', borderRadius: '4px', fontSize: '15px', display: 'inline-block' }}>
                 Voir les formules
               </Link>
             </div>
+
           </div>
+        </div>
+
+        {/* Scroll hint */}
+        <div style={{ position: 'absolute', bottom: '28px', left: '50%', transform: 'translateX(-50%)', zIndex: 2, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '6px', opacity: 0.45 }}>
+          <div style={{ width: '1px', height: '40px', background: 'linear-gradient(to bottom, transparent, #c9a96e)' }} />
         </div>
       </section>
 
       {/* TRUST BAR */}
-      <section style={{ background: '#0a0a0a', borderBottom: '1px solid rgba(201,169,110,0.1)', padding: '28px 20px' }}>
-        <div style={{ maxWidth: '900px', margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))', gap: '20px', textAlign: 'center' }}>
+      <section style={{ background: '#0a0a0a', borderBottom: '1px solid rgba(201,169,110,0.1)', padding: '32px 20px' }}>
+        <div style={{ maxWidth: '900px', margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(130px, 1fr))', gap: '20px', textAlign: 'center' }}>
           {[
-            { n: '50+', l: 'mariages filmés en Bretagne' },
-            { n: '5 ★', l: 'note moyenne Google' },
-            { n: '3', l: 'départements couverts' },
+            { n: '50+', l: 'mariages filmés' },
+            { n: '5,0 ★', l: 'note Google' },
             { n: '< 24h', l: 'délai de réponse' },
-            { n: '100%', l: 'clients satisfaits' },
+            { n: '6 sem.', l: 'délai de livraison' },
+            { n: '0 €', l: 'de frais cachés' },
           ].map((s, i) => (
-            <div key={i}>
-              <div style={{ fontSize: '24px', fontWeight: '700', color: GOLD, fontFamily: 'monospace', marginBottom: '4px' }}>{s.n}</div>
+            <div key={i} className="reveal" style={{ borderLeft: i > 0 ? '1px solid rgba(201,169,110,0.1)' : 'none' }}>
+              <div className="stat-number">{s.n}</div>
               <div style={{ fontSize: '12px', color: '#6b7280', lineHeight: 1.4 }}>{s.l}</div>
             </div>
           ))}
         </div>
       </section>
 
-      {/* PROCESS */}
-      <section style={{ padding: '80px 20px', maxWidth: '1100px', margin: '0 auto' }}>
-        <div style={{ textAlign: 'center', marginBottom: '56px' }}>
-          <div style={{ fontSize: '11px', letterSpacing: '3px', color: GOLD, textTransform: 'uppercase', fontFamily: 'monospace', marginBottom: '12px' }}>Comment ça se passe</div>
-          <h2 style={{ fontSize: 'clamp(24px, 4vw, 38px)', fontWeight: '400', color: CREAM, lineHeight: '1.3' }}>4 étapes pour votre film de mariage</h2>
+      {/* GALERIE BENTO */}
+      <section style={{ padding: '80px 20px', maxWidth: '1200px', margin: '0 auto' }}>
+        <div className="reveal" style={{ textAlign: 'center', marginBottom: '48px' }}>
+          <div style={{ fontSize: '11px', letterSpacing: '3px', color: GOLD, textTransform: 'uppercase', fontFamily: 'monospace', marginBottom: '12px' }}>Nos réalisations</div>
+          <h2 style={{ fontSize: 'clamp(24px, 4vw, 38px)', fontWeight: '400', color: CREAM, lineHeight: '1.3' }}>Films de mariage en Bretagne</h2>
+          <p style={{ fontSize: '14px', color: GRAY, marginTop: '12px' }}>Chaque mariage a sa lumière, son émotion, son histoire.</p>
         </div>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(230px, 1fr))', gap: '24px' }}>
-          {PROCESS.map((step, i) => (
-            <div key={i} style={{ background: CARD_BG, border: `1px solid ${BORDER}`, borderRadius: '8px', padding: '32px 24px' }}>
-              <div style={{ fontSize: '36px', fontFamily: 'monospace', color: 'rgba(201,169,110,0.25)', fontWeight: '700', marginBottom: '12px', lineHeight: 1 }}>{step.n}</div>
-              <h3 style={{ fontSize: '16px', color: GOLD, fontWeight: '400', marginBottom: '10px' }}>{step.title}</h3>
-              <p style={{ fontSize: '14px', color: GRAY, lineHeight: '1.7' }}>{step.text}</p>
+        <div className="gallery-bento reveal">
+          {[
+            { src: '/images/hero/hero-mariage-bretagne.webp', alt: 'Film mariage cinématographique Bretagne', label: 'Bretagne — film mariage' },
+            { src: '/images/hero/hero-mariage-nantes.webp', alt: 'Vidéaste mariage Nantes Loire-Atlantique', label: 'Nantes (44)' },
+            { src: '/images/hero/hero-mariage-vannes.webp', alt: 'Vidéaste mariage Vannes Morbihan', label: 'Vannes (56)' },
+            { src: '/images/hero/hero-mariage-ille-et-vilaine.webp', alt: 'Vidéaste mariage Ille-et-Vilaine', label: 'Ille-et-Vilaine (35)' },
+            { src: '/images/hero/hero-mariage-loire-atlantique.webp', alt: 'Vidéaste mariage Loire-Atlantique', label: 'Loire-Atlantique (44)' },
+            { src: '/images/hero/hero-mariage-morbihan.webp', alt: 'Vidéaste mariage Morbihan Golfe', label: 'Morbihan (56)' },
+          ].map((item, i) => (
+            <div key={i} style={{ position: 'relative', background: CARD_BG }}>
+              <img
+                src={item.src}
+                alt={item.alt}
+                loading={i < 3 ? 'eager' : 'lazy'}
+                style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+              />
+              <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, background: 'linear-gradient(transparent, rgba(0,0,0,0.65))', padding: '28px 16px 14px' }}>
+                <span style={{ fontSize: '12px', color: 'rgba(245,240,232,0.9)', letterSpacing: '0.3px' }}>{item.label}</span>
+              </div>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* PROCESS */}
+      <section style={{ background: '#0a0a0a', padding: '80px 20px', borderTop: '1px solid rgba(201,169,110,0.1)' }}>
+        <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
+          <div className="reveal" style={{ textAlign: 'center', marginBottom: '56px' }}>
+            <div style={{ fontSize: '11px', letterSpacing: '3px', color: GOLD, textTransform: 'uppercase', fontFamily: 'monospace', marginBottom: '12px' }}>De la réservation à la livraison</div>
+            <h2 style={{ fontSize: 'clamp(24px, 4vw, 38px)', fontWeight: '400', color: CREAM, lineHeight: '1.3' }}>4 étapes, zéro surprise</h2>
+          </div>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(230px, 1fr))', gap: '2px' }}>
+            {PROCESS.map((step, i) => (
+              <div key={i} className={`reveal reveal-d${i + 1}`} style={{ background: CARD_BG, borderTop: `2px solid ${i === 0 ? GOLD : BORDER}`, padding: '32px 24px' }}>
+                <div style={{ fontSize: '40px', fontFamily: 'monospace', color: 'rgba(201,169,110,0.18)', fontWeight: '700', marginBottom: '14px', lineHeight: 1 }}>{step.n}</div>
+                <h3 style={{ fontSize: '16px', color: GOLD, fontWeight: '400', marginBottom: '10px' }}>{step.title}</h3>
+                <p style={{ fontSize: '14px', color: GRAY, lineHeight: '1.75' }}>{step.text}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
       {/* FORMULES */}
-      <section id="formules" style={{ background: '#0a0a0a', padding: '80px 20px', borderTop: '1px solid rgba(201,169,110,0.1)' }}>
+      <section id="formules" style={{ padding: '80px 20px' }}>
         <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
-          <div style={{ textAlign: 'center', marginBottom: '56px' }}>
+          <div className="reveal" style={{ textAlign: 'center', marginBottom: '56px' }}>
             <div style={{ fontSize: '11px', letterSpacing: '3px', color: GOLD, textTransform: 'uppercase', fontFamily: 'monospace', marginBottom: '12px' }}>Formules & tarifs</div>
             <h2 style={{ fontSize: 'clamp(24px, 4vw, 38px)', fontWeight: '400', color: CREAM, lineHeight: '1.3' }}>Des films à partir de 890 €</h2>
-            <p style={{ fontSize: '15px', color: GRAY, marginTop: '12px', maxWidth: '500px', margin: '12px auto 0' }}>Toutes formules incluent contrat signé, musique licenciée et livraison numérique HD.</p>
+            <p style={{ fontSize: '15px', color: GRAY, marginTop: '14px' }}>Contrat signé · Musique licenciée · Livraison HD · Zéro frais caché</p>
           </div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '20px' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2px' }}>
             {FORMULES.map((f, i) => (
-              <div key={i} style={{
+              <div key={i} className={`reveal reveal-d${i + 1}`} style={{
                 background: f.popular ? 'linear-gradient(160deg, #141008, #0f0f0f)' : CARD_BG,
-                border: f.popular ? `1px solid ${GOLD}` : `1px solid ${BORDER}`,
-                borderRadius: '10px',
-                padding: '32px 28px',
+                borderTop: f.popular ? `2px solid ${GOLD}` : `2px solid rgba(201,169,110,0.15)`,
+                padding: '36px 28px',
                 position: 'relative',
-                transform: f.popular ? 'scale(1.02)' : 'none',
               }}>
                 {f.popular && (
-                  <div style={{ position: 'absolute', top: '-12px', left: '50%', transform: 'translateX(-50%)', background: GOLD, color: '#080808', fontSize: '11px', fontWeight: '700', padding: '4px 14px', borderRadius: '12px', letterSpacing: '1px', textTransform: 'uppercase', whiteSpace: 'nowrap' }}>
+                  <div style={{ position: 'absolute', top: '-1px', right: '24px', background: GOLD, color: '#080808', fontSize: '10px', fontWeight: '700', padding: '4px 12px', letterSpacing: '1.5px', textTransform: 'uppercase' }}>
                     La plus choisie
                   </div>
                 )}
                 <div style={{ fontSize: '11px', letterSpacing: '2px', color: f.popular ? GOLD : GRAY, textTransform: 'uppercase', fontFamily: 'monospace', marginBottom: '8px' }}>{f.name}</div>
-                <div style={{ fontSize: '38px', color: CREAM, fontFamily: 'monospace', fontWeight: '300', marginBottom: '4px' }}>{f.price} <span style={{ fontSize: '18px', color: GRAY }}>€</span></div>
-                <div style={{ fontSize: '13px', color: GRAY, marginBottom: '24px', paddingBottom: '20px', borderBottom: `1px solid ${BORDER}` }}>{f.duration}</div>
-                <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                <div style={{ fontSize: '42px', color: CREAM, fontFamily: 'monospace', fontWeight: '300', marginBottom: '4px', lineHeight: 1 }}>{f.price} <span style={{ fontSize: '18px', color: GRAY }}>€</span></div>
+                <div style={{ fontSize: '13px', color: GRAY, marginBottom: '28px', paddingBottom: '20px', borderBottom: `1px solid ${BORDER}` }}>{f.duration}</div>
+                <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '10px', marginBottom: '28px' }}>
                   {f.included.map((item, j) => (
                     <li key={j} style={{ fontSize: '13px', color: GRAY, display: 'flex', gap: '8px', alignItems: 'flex-start' }}>
-                      <span style={{ color: GOLD, flexShrink: 0, marginTop: '1px' }}>✓</span> {item}
+                      <span style={{ color: GOLD, flexShrink: 0, marginTop: '2px' }}>✓</span> {item}
                     </li>
                   ))}
                 </ul>
+                <a href="#contact" className="btn-primary" style={{ display: 'block', background: f.popular ? 'linear-gradient(135deg, #c9a96e, #a07840)' : 'transparent', border: f.popular ? 'none' : `1px solid ${BORDER}`, color: f.popular ? '#080808' : GOLD, padding: '13px', borderRadius: '4px', fontSize: '14px', fontWeight: f.popular ? '700' : '400', textAlign: 'center' }}>
+                  Demander un devis
+                </a>
               </div>
             ))}
           </div>
-          <div style={{ textAlign: 'center', marginTop: '32px' }}>
+          <div className="reveal" style={{ textAlign: 'center', marginTop: '36px' }}>
             <Link href="/tarifs-videaste-mariage" style={{ color: GOLD, fontSize: '14px', borderBottom: '1px solid rgba(201,169,110,0.3)', paddingBottom: '2px' }}>
-              Voir le détail complet des formules →
+              Voir le comparatif complet des formules →
             </Link>
           </div>
-        </div>
-      </section>
-
-      {/* GÉOGRAPHIE */}
-      <section style={{ padding: '80px 20px', maxWidth: '1100px', margin: '0 auto' }}>
-        <div style={{ textAlign: 'center', marginBottom: '56px' }}>
-          <div style={{ fontSize: '11px', letterSpacing: '3px', color: GOLD, textTransform: 'uppercase', fontFamily: 'monospace', marginBottom: '12px' }}>Zone d'intervention</div>
-          <h2 style={{ fontSize: 'clamp(24px, 4vw, 38px)', fontWeight: '400', color: CREAM, lineHeight: '1.3' }}>Disponible dans 3 départements bretons</h2>
-        </div>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '20px' }}>
-          {DEPTS.map((d, i) => (
-            <Link key={i} href={d.href}>
-              <div style={{ background: CARD_BG, border: `1px solid ${BORDER}`, borderRadius: '10px', padding: '36px 28px', cursor: 'pointer', transition: 'all 0.25s' }}
-                onMouseEnter={e => { e.currentTarget.style.borderColor = GOLD; e.currentTarget.style.transform = 'translateY(-4px)'; }}
-                onMouseLeave={e => { e.currentTarget.style.borderColor = BORDER; e.currentTarget.style.transform = 'translateY(0)'; }}>
-                <div style={{ fontSize: '42px', fontFamily: 'monospace', color: 'rgba(201,169,110,0.3)', fontWeight: '700', lineHeight: 1, marginBottom: '12px' }}>{d.dept}</div>
-                <h3 style={{ fontSize: '18px', color: CREAM, fontWeight: '400', marginBottom: '8px' }}>{d.name}</h3>
-                <p style={{ fontSize: '12px', color: GOLD, marginBottom: '12px', letterSpacing: '0.5px' }}>{d.cities}</p>
-                <p style={{ fontSize: '13px', color: GRAY, lineHeight: '1.6' }}>{d.desc}</p>
-                <div style={{ marginTop: '20px', fontSize: '13px', color: GOLD }}>Voir plus →</div>
-              </div>
-            </Link>
-          ))}
-        </div>
-      </section>
-
-      {/* GALERIE PHOTOS */}
-      <section style={{ padding: '80px 20px', maxWidth: '1100px', margin: '0 auto' }}>
-        <div style={{ textAlign: 'center', marginBottom: '48px' }}>
-          <div style={{ fontSize: '11px', letterSpacing: '3px', color: GOLD, textTransform: 'uppercase', fontFamily: 'monospace', marginBottom: '12px' }}>Nos réalisations</div>
-          <h2 style={{ fontSize: 'clamp(24px, 4vw, 38px)', fontWeight: '400', color: CREAM, lineHeight: '1.3' }}>Extraits de films de mariage en Bretagne</h2>
-          <p style={{ fontSize: '14px', color: GRAY, marginTop: '12px', maxWidth: '480px', margin: '12px auto 0' }}>Chaque film est unique, comme chaque couple. Voici un aperçu de notre univers cinématographique.</p>
-        </div>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '16px' }}>
-          {[
-            { src: '/images/hero/hero-mariage-bretagne.webp', alt: 'Film de mariage cinématographique en Bretagne — Mariage Bretagne Films', label: 'Film mariage — Bretagne' },
-            { src: '/images/hero/hero-mariage-nantes.webp', alt: 'Vidéaste mariage Nantes — film cinématographique Loire-Atlantique (44)', label: 'Mariage — Nantes (44)' },
-            { src: '/images/hero/hero-mariage-vannes.webp', alt: 'Vidéaste mariage Vannes — Golfe du Morbihan (56)', label: 'Mariage — Vannes (56)' },
-            { src: '/images/hero/hero-mariage-ille-et-vilaine.webp', alt: 'Vidéaste mariage Ille-et-Vilaine — film cinématographique château breton (35)', label: 'Mariage — Ille-et-Vilaine (35)' },
-            { src: '/images/hero/hero-mariage-loire-atlantique.webp', alt: 'Vidéaste mariage Loire-Atlantique — film cinématographique Nantes (44)', label: 'Mariage — Loire-Atlantique (44)' },
-            { src: '/images/hero/hero-mariage-morbihan.webp', alt: 'Vidéaste mariage Morbihan — film cinématographique Golfe du Morbihan (56)', label: 'Mariage — Morbihan (56)' },
-          ].map((item, i) => (
-            <div key={i} style={{ position: 'relative', paddingBottom: '66%', borderRadius: '8px', overflow: 'hidden', background: CARD_BG }}>
-              <img
-                src={item.src}
-                alt={item.alt}
-                loading="lazy"
-                style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
-                onError={e => { e.currentTarget.parentElement.style.border = '1px dashed rgba(201,169,110,0.25)'; e.currentTarget.style.display = 'none'; e.currentTarget.parentElement.innerHTML += `<div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;padding:20px"><span style="font-size:28px;opacity:0.2">🎬</span><span style="font-size:11px;color:rgba(201,169,110,0.4);text-align:center">${item.label}</span></div>`; }}
-              />
-              <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, background: 'linear-gradient(transparent, rgba(0,0,0,0.7))', padding: '24px 16px 14px' }}>
-                <span style={{ fontSize: '12px', color: 'rgba(245,240,232,0.85)', letterSpacing: '0.3px' }}>{item.label}</span>
-              </div>
-            </div>
-          ))}
         </div>
       </section>
 
       {/* TÉMOIGNAGES */}
       <section style={{ background: '#0a0a0a', padding: '80px 20px', borderTop: '1px solid rgba(201,169,110,0.1)' }}>
         <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
-          <div style={{ textAlign: 'center', marginBottom: '56px' }}>
+          <div className="reveal" style={{ textAlign: 'center', marginBottom: '56px' }}>
             <div style={{ fontSize: '11px', letterSpacing: '3px', color: GOLD, textTransform: 'uppercase', fontFamily: 'monospace', marginBottom: '12px' }}>Ils nous ont fait confiance</div>
             <h2 style={{ fontSize: 'clamp(24px, 4vw, 38px)', fontWeight: '400', color: CREAM }}>Ce que disent nos mariés</h2>
           </div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '24px' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2px' }}>
             {TESTIMONIALS.map((t, i) => (
-              <div key={i} style={{ background: CARD_BG, border: `1px solid ${BORDER}`, borderRadius: '10px', padding: '32px 28px' }}>
-                <div style={{ color: GOLD, fontSize: '18px', marginBottom: '16px', letterSpacing: '2px' }}>{'★'.repeat(t.rating)}</div>
-                <p style={{ fontSize: '14px', color: GRAY, lineHeight: '1.8', marginBottom: '20px', fontStyle: 'italic' }}>"{t.text}"</p>
+              <div key={i} className={`reveal reveal-d${i + 1}`} style={{ background: CARD_BG, borderTop: `2px solid rgba(201,169,110,0.15)`, padding: '36px 28px' }}>
+                <div style={{ color: GOLD, fontSize: '16px', marginBottom: '20px', letterSpacing: '3px' }}>{'★'.repeat(t.rating)}</div>
+                <p style={{ fontSize: '15px', color: '#c5bfb5', lineHeight: '1.8', marginBottom: '24px', fontStyle: 'italic' }}>"{t.text}"</p>
                 <div style={{ fontSize: '13px', color: CREAM, fontWeight: '400' }}>{t.author}</div>
                 <div style={{ fontSize: '12px', color: '#6b7280', marginTop: '4px' }}>{t.date}</div>
               </div>
@@ -295,60 +296,93 @@ export default function Home() {
         </div>
       </section>
 
-      {/* REASSURANCES */}
+      {/* GÉOGRAPHIE */}
       <section style={{ padding: '80px 20px', maxWidth: '1100px', margin: '0 auto' }}>
-        <div style={{ textAlign: 'center', marginBottom: '56px' }}>
-          <div style={{ fontSize: '11px', letterSpacing: '3px', color: GOLD, textTransform: 'uppercase', fontFamily: 'monospace', marginBottom: '12px' }}>Pourquoi nous choisir</div>
-          <h2 style={{ fontSize: 'clamp(24px, 4vw, 38px)', fontWeight: '400', color: CREAM }}>Vous méritez une totale sérénité</h2>
+        <div className="reveal" style={{ textAlign: 'center', marginBottom: '56px' }}>
+          <div style={{ fontSize: '11px', letterSpacing: '3px', color: GOLD, textTransform: 'uppercase', fontFamily: 'monospace', marginBottom: '12px' }}>Zone d'intervention</div>
+          <h2 style={{ fontSize: 'clamp(24px, 4vw, 38px)', fontWeight: '400', color: CREAM, lineHeight: '1.3' }}>3 départements bretons, 0 frais de déplacement</h2>
         </div>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '24px' }}>
-          {REASSURANCES.map((r, i) => (
-            <div key={i} style={{ background: CARD_BG, border: `1px solid ${BORDER}`, borderRadius: '10px', padding: '32px 24px', textAlign: 'center' }}>
-              <div style={{ fontSize: '36px', marginBottom: '16px' }}>{r.icon}</div>
-              <h3 style={{ fontSize: '15px', color: GOLD, fontWeight: '400', marginBottom: '10px' }}>{r.title}</h3>
-              <p style={{ fontSize: '13px', color: GRAY, lineHeight: '1.7' }}>{r.text}</p>
-            </div>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2px' }}>
+          {DEPTS.map((d, i) => (
+            <Link key={i} href={d.href}>
+              <div className={`reveal reveal-d${i + 1}`} style={{ background: CARD_BG, borderTop: `2px solid rgba(201,169,110,0.15)`, padding: '36px 28px', cursor: 'pointer', transition: 'border-color 0.25s' }}
+                onMouseEnter={e => { e.currentTarget.style.borderTopColor = GOLD; }}
+                onMouseLeave={e => { e.currentTarget.style.borderTopColor = 'rgba(201,169,110,0.15)'; }}>
+                <div style={{ fontSize: '48px', fontFamily: 'monospace', color: 'rgba(201,169,110,0.2)', fontWeight: '700', lineHeight: 1, marginBottom: '14px' }}>{d.dept}</div>
+                <h3 style={{ fontSize: '18px', color: CREAM, fontWeight: '400', marginBottom: '8px' }}>{d.name}</h3>
+                <p style={{ fontSize: '12px', color: GOLD, marginBottom: '12px', letterSpacing: '0.4px' }}>{d.cities}</p>
+                <p style={{ fontSize: '13px', color: GRAY, lineHeight: '1.6' }}>{d.desc}</p>
+                <div style={{ marginTop: '24px', fontSize: '13px', color: GOLD }}>Voir les mariages dans ce département →</div>
+              </div>
+            </Link>
           ))}
         </div>
       </section>
 
-      {/* FAQ RAPIDE */}
+      {/* POURQUOI NOUS */}
       <section style={{ background: '#0a0a0a', padding: '80px 20px', borderTop: '1px solid rgba(201,169,110,0.1)' }}>
+        <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
+          <div className="reveal" style={{ textAlign: 'center', marginBottom: '56px' }}>
+            <div style={{ fontSize: '11px', letterSpacing: '3px', color: GOLD, textTransform: 'uppercase', fontFamily: 'monospace', marginBottom: '12px' }}>Notre engagement</div>
+            <h2 style={{ fontSize: 'clamp(24px, 4vw, 38px)', fontWeight: '400', color: CREAM }}>Ce qui nous rend différents</h2>
+          </div>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '2px' }}>
+            {[
+              { label: 'Matériel double', text: 'Deux corps caméra sur chaque mariage. Si l\'un tombe en panne, la journée continue. Aucun couple ne nous a jamais attendu pour ça.' },
+              { label: 'Contrat & acompte', text: 'Votre date est sécurisée dès la signature du contrat. Les conditions sont claires, sans fine print et sans surprise à la livraison.' },
+              { label: 'Assurance pro', text: 'Responsabilité civile professionnelle et assurance matériel. Vous n\'avez pas à vous en préoccuper — c\'est notre affaire.' },
+              { label: '50+ mariages en Bretagne', text: 'On connaît les lumières du Golfe en soirée, les châteaux du 35 au crépuscule, les vignes du 44 à l\'automne. C\'est dans les films.' },
+            ].map((r, i) => (
+              <div key={i} className={`reveal reveal-d${i % 3 + 1}`} style={{ background: CARD_BG, borderTop: `2px solid rgba(201,169,110,0.15)`, padding: '32px 24px' }}>
+                <h3 style={{ fontSize: '15px', color: GOLD, fontWeight: '400', marginBottom: '12px' }}>{r.label}</h3>
+                <p style={{ fontSize: '13px', color: GRAY, lineHeight: '1.75' }}>{r.text}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ RAPIDE */}
+      <section style={{ padding: '80px 20px' }}>
         <div style={{ maxWidth: '760px', margin: '0 auto' }}>
-          <div style={{ textAlign: 'center', marginBottom: '48px' }}>
+          <div className="reveal" style={{ textAlign: 'center', marginBottom: '48px' }}>
             <div style={{ fontSize: '11px', letterSpacing: '3px', color: GOLD, textTransform: 'uppercase', fontFamily: 'monospace', marginBottom: '12px' }}>Questions fréquentes</div>
             <h2 style={{ fontSize: 'clamp(22px, 4vw, 34px)', fontWeight: '400', color: CREAM }}>Vos questions, nos réponses</h2>
           </div>
           {[
-            { q: 'Combien coûte un vidéaste mariage en Bretagne ?', a: 'Comptez entre 800 € et 2 000 € selon le nombre de cadreurs, la durée et les livrables. Notre formule Essentielle débute à 890 €, la formule Cinéma à 1 790 €. Un devis personnalisé est toujours gratuit.' },
-            { q: 'Dois-je réserver tôt mon vidéaste mariage ?', a: 'En Bretagne, les weekends de mai à septembre partent très vite. Comptez idéalement 12 à 18 mois à l\'avance pour les dates de haute saison. Une réservation avec acompte sécurise votre date définitivement.' },
-            { q: 'Le drone est-il inclus ?', a: 'Les prises de vue aérienne par drone sont disponibles dans la formule Cinéma, sous réserve d\'autorisation préfectorale. Certains lieux (espaces aériens contrôlés, sites classés) peuvent l\'interdire. Nous vérifions chaque lieu en amont.' },
-            { q: 'Dans quel délai je reçois mon film ?', a: 'Entre 6 et 10 semaines selon la formule. Vous recevez un lien de visionnage privé HD, puis votre film sur clé USB gravée avec votre date de mariage.' },
+            { q: 'Combien coûte un vidéaste mariage en Bretagne ?', a: 'Comptez entre 890 € et 1 790 € selon la durée de présence et les livrables inclus. Notre formule Prestige à 1 290 € est la plus choisie. Devis personnalisé toujours gratuit.' },
+            { q: 'Dois-je réserver tôt ?', a: 'En Bretagne, les samedis de mai à septembre partent 12 à 18 mois à l\'avance. En dehors de la haute saison, des disponibilités existent sur un délai plus court. Vérifiez votre date sans attendre.' },
+            { q: 'Le drone est-il inclus ?', a: 'Le drone est inclus dans la formule Cinéma (1 790 €), sous réserve d\'autorisation préfectorale. Certains sites classés ou espaces aériens contrôlés peuvent l\'interdire — nous vérifions systématiquement en amont.' },
+            { q: 'Dans quel délai je reçois mon film ?', a: 'Entre 6 et 10 semaines selon la formule. Vous recevez d\'abord un lien de visionnage privé HD, puis votre film sur clé USB gravée avec votre date de mariage.' },
           ].map((item, i) => (
-            <div key={i} style={{ borderBottom: `1px solid ${BORDER}`, padding: '24px 0' }}>
+            <div key={i} className="reveal" style={{ borderBottom: `1px solid ${BORDER}`, padding: '24px 0' }}>
               <h3 style={{ fontSize: '16px', color: CREAM, fontWeight: '400', marginBottom: '10px' }}>{item.q}</h3>
               <p style={{ fontSize: '14px', color: GRAY, lineHeight: '1.8' }}>{item.a}</p>
             </div>
           ))}
-          <div style={{ textAlign: 'center', marginTop: '32px' }}>
+          <div className="reveal" style={{ textAlign: 'center', marginTop: '32px' }}>
             <Link href="/combien-coute-videaste-mariage" style={{ color: GOLD, fontSize: '14px', borderBottom: '1px solid rgba(201,169,110,0.3)', paddingBottom: '2px' }}>
-              Voir toutes les questions →
+              Guide complet du prix d'un vidéaste mariage →
             </Link>
           </div>
         </div>
       </section>
 
       {/* CONTACT */}
-      <section id="contact" style={{ padding: '80px 20px', background: 'linear-gradient(160deg, #0a0908, #080808)', borderTop: '1px solid rgba(201,169,110,0.15)' }}>
-        <div style={{ maxWidth: '680px', margin: '0 auto', textAlign: 'center' }}>
-          <div style={{ fontSize: '11px', letterSpacing: '3px', color: GOLD, textTransform: 'uppercase', fontFamily: 'monospace', marginBottom: '20px' }}>Parlons de votre mariage</div>
-          <h2 style={{ fontSize: 'clamp(26px, 4vw, 42px)', fontWeight: '400', color: CREAM, marginBottom: '16px', lineHeight: '1.3' }}>
-            Votre date est-elle encore disponible ?
-          </h2>
-          <p style={{ fontSize: '16px', color: GRAY, marginBottom: '40px', lineHeight: '1.7' }}>
-            Envoyez-nous votre date et le lieu envisagé. Réponse garantie sous 24h pour vérifier la disponibilité et vous envoyer une proposition sur mesure.
-          </p>
-          <QuickContactForm />
+      <section id="contact" style={{ padding: '80px 20px 100px', background: 'linear-gradient(160deg, #0a0908, #080808)', borderTop: '1px solid rgba(201,169,110,0.15)' }}>
+        <div style={{ maxWidth: '660px', margin: '0 auto', textAlign: 'center' }}>
+          <div className="reveal" style={{ marginBottom: '40px' }}>
+            <div style={{ fontSize: '11px', letterSpacing: '3px', color: GOLD, textTransform: 'uppercase', fontFamily: 'monospace', marginBottom: '20px' }}>Parlons de votre mariage</div>
+            <h2 style={{ fontSize: 'clamp(26px, 4vw, 44px)', fontWeight: '400', color: CREAM, marginBottom: '16px', lineHeight: '1.25' }}>
+              Votre date est-elle<br />encore disponible ?
+            </h2>
+            <p style={{ fontSize: '16px', color: GRAY, lineHeight: '1.7' }}>
+              Indiquez votre date et le lieu envisagé. Réponse garantie sous 24h.
+            </p>
+          </div>
+          <div className="reveal">
+            <QuickContactForm />
+          </div>
         </div>
       </section>
     </Layout>
