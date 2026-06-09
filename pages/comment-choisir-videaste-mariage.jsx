@@ -108,6 +108,81 @@ export default function CommentChoisir() {
         </div>
       </section>
 
+      {/* NOTRE MATÉRIEL */}
+      <section style={{ background: '#0a0a0a', padding: '80px 20px', borderTop: '1px solid rgba(201,169,110,0.1)' }}>
+        <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
+          <div style={{ textAlign: 'center', marginBottom: '56px' }}>
+            <div style={{ fontSize: '11px', letterSpacing: '3px', color: GOLD, textTransform: 'uppercase', fontFamily: 'monospace', marginBottom: '12px' }}>Transparence</div>
+            <h2 style={{ fontSize: 'clamp(22px, 3.5vw, 34px)', fontWeight: '400', color: CREAM }}>Le matériel derrière chaque film</h2>
+            <p style={{ fontSize: '15px', color: GRAY, marginTop: '14px', maxWidth: '560px', margin: '14px auto 0' }}>
+              Demandez toujours à voir le matériel de votre vidéaste. Voici ce qu'on utilise sur chaque mariage en Bretagne.
+            </p>
+          </div>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
+
+            <div style={{ background: CARD_BG, border: `1px solid ${BORDER}`, borderRadius: '10px', overflow: 'hidden' }}>
+              <div style={{ aspectRatio: '4/3', overflow: 'hidden' }}>
+                <img
+                  src="/images/materiel/sony-alpha7iv-videaste-mariage-bretagne.webp"
+                  alt="Sony Alpha 7 IV — boîtier utilisé pour filmer les mariages en Bretagne (35, 44, 56)"
+                  loading="lazy"
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                />
+              </div>
+              <div style={{ padding: '24px 22px' }}>
+                <div style={{ fontSize: '11px', letterSpacing: '2px', color: GOLD, fontFamily: 'monospace', marginBottom: '8px', textTransform: 'uppercase' }}>Boîtier principal</div>
+                <h3 style={{ fontSize: '17px', color: CREAM, fontWeight: '400', marginBottom: '12px' }}>Sony Alpha 7 IV</h3>
+                <p style={{ fontSize: '13px', color: GRAY, lineHeight: '1.75' }}>
+                  Full frame 33 Mpx, vidéo 4K 60fps. Autofocus par reconnaissance d'œil et de visage — il suit le regard dans la foule, même lors d'un déplacement rapide. Excellente sensibilité en basse lumière : votre cérémonie dans une grange ou une chapelle sombre sera aussi belle que celle filmée en plein soleil.
+                </p>
+              </div>
+            </div>
+
+            <div style={{ background: CARD_BG, border: `1px solid ${BORDER}`, borderRadius: '10px', overflow: 'hidden' }}>
+              <div style={{ aspectRatio: '4/3', overflow: 'hidden' }}>
+                <img
+                  src="/images/materiel/dji-ronin-rs5-stabilisateur-film-mariage.webp"
+                  alt="DJI Ronin RS5 — stabilisateur 3 axes pour les plans cinématographiques de mariage"
+                  loading="lazy"
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                />
+              </div>
+              <div style={{ padding: '24px 22px' }}>
+                <div style={{ fontSize: '11px', letterSpacing: '2px', color: GOLD, fontFamily: 'monospace', marginBottom: '8px', textTransform: 'uppercase' }}>Stabilisation</div>
+                <h3 style={{ fontSize: '17px', color: CREAM, fontWeight: '400', marginBottom: '12px' }}>DJI Ronin RS5</h3>
+                <p style={{ fontSize: '13px', color: GRAY, lineHeight: '1.75' }}>
+                  Stabilisateur 3 axes motorisé. C'est ce qui transforme une vidéo ordinaire en film cinématographique : les plans de marche, les rotations autour des mariés, les avancées lentes dans un couloir ou un jardin — tout devient fluide, élégant. 8h d'autonomie pour tenir toute la journée.
+                </p>
+              </div>
+            </div>
+
+            <div style={{ background: CARD_BG, border: `1px solid ${BORDER}`, borderRadius: '10px', overflow: 'hidden' }}>
+              <div style={{ aspectRatio: '4/3', overflow: 'hidden' }}>
+                <img
+                  src="/images/materiel/dji-mic3-son-mariage-professionnel.webp"
+                  alt="DJI Mic 3 — microphone sans fil pour la capture du son ambiance lors des mariages"
+                  loading="lazy"
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                />
+              </div>
+              <div style={{ padding: '24px 22px' }}>
+                <div style={{ fontSize: '11px', letterSpacing: '2px', color: GOLD, fontFamily: 'monospace', marginBottom: '8px', textTransform: 'uppercase' }}>Son professionnel</div>
+                <h3 style={{ fontSize: '17px', color: CREAM, fontWeight: '400', marginBottom: '12px' }}>DJI Mic 3</h3>
+                <p style={{ fontSize: '13px', color: GRAY, lineHeight: '1.75' }}>
+                  Microphone sans fil avec latence inférieure à 10 ms. Le son, c'est 50 % d'un film de mariage — et c'est souvent ce qu'on néglige. Les vœux, les discours, le son ambiance de la fête : tout est capté nettement, même en extérieur avec du vent, même à 50 mètres de la caméra.
+                </p>
+              </div>
+            </div>
+
+          </div>
+          <div style={{ marginTop: '32px', background: 'rgba(201,169,110,0.06)', border: `1px solid rgba(201,169,110,0.15)`, borderRadius: '8px', padding: '18px 24px', textAlign: 'center' }}>
+            <p style={{ fontSize: '13px', color: GRAY, lineHeight: '1.6' }}>
+              <span style={{ color: GOLD }}>Bon à savoir :</span> en dehors de ce matériel principal, chaque mariage est équipé d'un second corps caméra de backup. Si l'un tombe en panne, la journée continue — sans interruption et sans que vous le sachiez.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* QUESTIONS À POSER */}
       <section style={{ background: '#0a0a0a', padding: '72px 20px', borderTop: '1px solid rgba(201,169,110,0.1)' }}>
         <div style={{ maxWidth: '860px', margin: '0 auto' }}>
@@ -181,7 +256,7 @@ export default function CommentChoisir() {
       {/* POURQUOI NOUS */}
       <section style={{ padding: '72px 20px', maxWidth: '1100px', margin: '0 auto' }}>
         <div style={{ background: 'linear-gradient(160deg, #141008, #0f0f0f)', border: `1px solid ${GOLD}`, borderRadius: '12px', padding: '40px 32px', textAlign: 'center' }}>
-          <div style={{ fontSize: '11px', letterSpacing: '2px', color: GOLD, fontFamily: 'monospace', textTransform: 'uppercase', marginBottom: '16px' }}>Studio Lumière Mariage</div>
+          <div style={{ fontSize: '11px', letterSpacing: '2px', color: GOLD, fontFamily: 'monospace', textTransform: 'uppercase', marginBottom: '16px' }}>Mariage Bretagne Films</div>
           <h2 style={{ fontSize: 'clamp(22px, 3.5vw, 32px)', fontWeight: '400', color: CREAM, marginBottom: '14px' }}>Nous cochons toutes les cases</h2>
           <p style={{ fontSize: '15px', color: GRAY, maxWidth: '560px', margin: '0 auto 32px', lineHeight: '1.7' }}>
             Contrat signé dès la réservation, assurance pro, matériel de backup systématique, 50+ mariages filmés en Bretagne. Réponse sous 24h.
@@ -212,7 +287,7 @@ export default function CommentChoisir() {
             <Link href="/tarifs-videaste-mariage">
               <div style={{ background: CARD_BG, border: `1px solid ${BORDER}`, borderRadius: '10px', padding: '24px', cursor: 'pointer' }}>
                 <div style={{ fontSize: '11px', color: GOLD, fontFamily: 'monospace', letterSpacing: '1px', marginBottom: '10px' }}>NOS FORMULES</div>
-                <h3 style={{ fontSize: '16px', color: CREAM, fontWeight: '400', marginBottom: '8px' }}>Formules & tarifs Studio Lumière</h3>
+                <h3 style={{ fontSize: '16px', color: CREAM, fontWeight: '400', marginBottom: '8px' }}>Formules & tarifs Mariage Bretagne Films</h3>
                 <p style={{ fontSize: '13px', color: GRAY, lineHeight: '1.6' }}>Comparatif détaillé de nos 4 formules, de 890 € à sur mesure. Devis gratuit.</p>
                 <div style={{ marginTop: '14px', fontSize: '13px', color: GOLD }}>Voir les tarifs →</div>
               </div>

@@ -328,14 +328,21 @@ export default function Home() {
           </div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '2px' }}>
             {[
-              { label: 'Matériel double', text: 'Deux corps caméra sur chaque mariage. Si l\'un tombe en panne, la journée continue. Aucun couple ne nous a jamais attendu pour ça.' },
+              { label: 'Matériel double', text: 'Deux corps caméra sur chaque mariage. Si l\'un tombe en panne, la journée continue. Aucun couple ne nous a jamais attendu pour ça.', img: '/images/materiel/sony-alpha7iv-videaste-mariage-bretagne.webp', imgAlt: 'Sony Alpha 7 IV — boîtier utilisé pour filmer les mariages en Bretagne' },
               { label: 'Contrat & acompte', text: 'Votre date est sécurisée dès la signature du contrat. Les conditions sont claires, sans fine print et sans surprise à la livraison.' },
               { label: 'Assurance pro', text: 'Responsabilité civile professionnelle et assurance matériel. Vous n\'avez pas à vous en préoccuper — c\'est notre affaire.' },
               { label: '50+ mariages en Bretagne', text: 'On connaît les lumières du Golfe en soirée, les châteaux du 35 au crépuscule, les vignes du 44 à l\'automne. C\'est dans les films.' },
             ].map((r, i) => (
-              <div key={i} className={`reveal reveal-d${i % 3 + 1}`} style={{ background: CARD_BG, borderTop: `2px solid rgba(201,169,110,0.15)`, padding: '32px 24px' }}>
-                <h3 style={{ fontSize: '15px', color: GOLD, fontWeight: '400', marginBottom: '12px' }}>{r.label}</h3>
-                <p style={{ fontSize: '13px', color: GRAY, lineHeight: '1.75' }}>{r.text}</p>
+              <div key={i} className={`reveal reveal-d${i % 3 + 1}`} style={{ background: CARD_BG, borderTop: `2px solid rgba(201,169,110,0.15)`, overflow: 'hidden' }}>
+                {r.img && (
+                  <div style={{ aspectRatio: '16/9', overflow: 'hidden' }}>
+                    <img src={r.img} alt={r.imgAlt} loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+                  </div>
+                )}
+                <div style={{ padding: '32px 24px' }}>
+                  <h3 style={{ fontSize: '15px', color: GOLD, fontWeight: '400', marginBottom: '12px' }}>{r.label}</h3>
+                  <p style={{ fontSize: '13px', color: GRAY, lineHeight: '1.75' }}>{r.text}</p>
+                </div>
               </div>
             ))}
           </div>
