@@ -16,7 +16,7 @@ const faqItems = [
   { q: 'La vidéo de mariage vaut-elle le prix ?', a: 'C\'est la question que beaucoup de couples se posent. La réponse des mariés qui ont fait appel à un vidéaste est quasi-unanime : c\'est le poste qui leur procure le plus d\'émotion lors du visionnage. Les photos capturent un instant ; la vidéo capture le mouvement, les voix, les rires, les larmes — les sons et textures de votre journée. Des études montrent que les couples qui n\'ont pas prévu de vidéo regrettent très souvent ce choix. Avec une formule à partir de 890 €, l\'investissement est souvent relativisé face à la durée de vie du souvenir.' },
   { q: 'Faut-il choisir le même prestataire pour la photo et la vidéo ?', a: 'Non, ce n\'est pas une obligation — et dans la plupart des cas, ce n\'est pas conseillé. Les photographes et vidéastes ont des techniques, des regards et des approches différents. Ce qui compte : que les deux prestataires communiquent bien et se respectent le jour J. Un bon vidéaste professionnel a l\'habitude de travailler en binôme avec le photographe. Présentez-les l\'un à l\'autre en amont.' },
   { q: 'Le drone est-il inclus dans le prix ?', a: 'Cela dépend de la formule. Dans notre gamme, le drone est inclus dans la formule Cinéma (1 790 €). Pour les formules Essentielle et Prestige, une option drone peut être ajoutée selon la faisabilité sur votre lieu (certains espaces aériens sont réglementés). Les vols de drone nécessitent des autorisations préfectorales que nous gérons en amont.' },
-  { q: 'Y a-t-il des frais cachés ?', a: 'Non, chez Studio Lumière Mariage, les tarifs affichés sont des prix tout compris pour les mariages en Bretagne (35, 44, 56). Pas de supplément pour le déplacement dans ces trois départements, pas de frais de son ou de backup caché. Si votre lieu est en dehors de notre zone d\'intervention habituelle, un forfait kilométrique transparent vous est indiqué dans le devis dès le premier contact.' },
+  { q: 'Y a-t-il des frais cachés ?', a: 'Non, chez Mariage Bretagne Films, les tarifs affichés sont des prix tout compris pour les mariages en Bretagne (35, 44, 56). Pas de supplément pour le déplacement dans ces trois départements, pas de frais de son ou de backup caché. Si votre lieu est en dehors de notre zone d\'intervention habituelle, un forfait kilométrique transparent vous est indiqué dans le devis dès le premier contact.' },
 ];
 
 const schema = {
@@ -150,12 +150,24 @@ export default function PrixVideaste() {
 
       {/* CONTACT */}
       <section id="contact" style={{ padding: '72px 20px', background: 'linear-gradient(160deg, #0a0908, #080808)', borderTop: '1px solid rgba(201,169,110,0.15)' }}>
-        <div style={{ maxWidth: '640px', margin: '0 auto', textAlign: 'center' }}>
-          <h2 style={{ fontSize: 'clamp(24px, 4vw, 38px)', fontWeight: '400', color: CREAM, marginBottom: '14px' }}>Un devis gratuit sous 24h</h2>
-          <p style={{ fontSize: '15px', color: GRAY, marginBottom: '32px', lineHeight: '1.7' }}>
-            Indiquez-nous votre date, le lieu et vos attentes. Nous vous envoyons un devis complet et transparent.
-          </p>
-          <QuickContactForm />
+        <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '60px', alignItems: 'start' }}>
+            <div>
+              <img
+                src="/images/about/eymeric-videaste-mariage-bretagne.webp"
+                alt="Eymeric, vidéaste mariage — répond personnellement sous 24h"
+                loading="lazy"
+                style={{ width: '100%', borderRadius: '8px', objectFit: 'cover', objectPosition: 'top', aspectRatio: '4/5', marginBottom: '28px', display: 'block' }}
+              />
+              <h2 style={{ fontSize: 'clamp(24px, 4vw, 38px)', fontWeight: '400', color: CREAM, marginBottom: '14px' }}>Un devis gratuit sous 24h</h2>
+              <p style={{ fontSize: '15px', color: GRAY, lineHeight: '1.7' }}>
+                Vous écrivez directement à Eymeric — pas un formulaire anonyme. Indiquez votre date, le lieu et vos attentes.
+              </p>
+            </div>
+            <div>
+              <QuickContactForm />
+            </div>
+          </div>
         </div>
       </section>
     </Layout>

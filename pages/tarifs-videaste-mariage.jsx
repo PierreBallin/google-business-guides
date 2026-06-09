@@ -131,7 +131,7 @@ const COMPARAISON = [
 export default function Tarifs() {
   return (
     <Layout
-      title="Tarifs Vidéaste Mariage Bretagne | Studio Lumière Mariage — 890€ à 1790€"
+      title="Tarifs Vidéaste Mariage Bretagne | Mariage Bretagne Films — 890€ à 1790€"
       description="Tarifs et formules vidéaste mariage en Bretagne (35, 44, 56). Formule Essentielle 890€, Prestige 1290€, Cinéma 1790€. Devis gratuit. Aucun frais caché."
       canonical="/tarifs-videaste-mariage"
       schema={schema}
@@ -295,12 +295,24 @@ export default function Tarifs() {
 
       {/* CONTACT */}
       <section id="contact" style={{ padding: '72px 20px', background: 'linear-gradient(160deg, #0a0908, #080808)', borderTop: '1px solid rgba(201,169,110,0.15)' }}>
-        <div style={{ maxWidth: '640px', margin: '0 auto', textAlign: 'center' }}>
-          <h2 style={{ fontSize: 'clamp(24px, 4vw, 38px)', fontWeight: '400', color: CREAM, marginBottom: '14px' }}>Devis gratuit en 24h</h2>
-          <p style={{ fontSize: '15px', color: GRAY, marginBottom: '32px', lineHeight: '1.7' }}>
-            Indiquez-nous votre date, le lieu et la formule qui vous intéresse. Nous vous répondons sous 24h avec un devis personnalisé.
-          </p>
-          <QuickContactForm />
+        <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '60px', alignItems: 'start' }}>
+            <div>
+              <img
+                src="/images/about/eymeric-videaste-mariage-bretagne.webp"
+                alt="Eymeric, vidéaste mariage — répond personnellement sous 24h"
+                loading="lazy"
+                style={{ width: '100%', borderRadius: '8px', objectFit: 'cover', objectPosition: 'top', aspectRatio: '4/5', marginBottom: '28px', display: 'block' }}
+              />
+              <h2 style={{ fontSize: 'clamp(24px, 4vw, 38px)', fontWeight: '400', color: CREAM, marginBottom: '14px' }}>Devis gratuit en 24h</h2>
+              <p style={{ fontSize: '15px', color: GRAY, lineHeight: '1.7' }}>
+                Vous écrivez directement à Eymeric — pas un formulaire anonyme. Indiquez votre date, le lieu et la formule qui vous intéresse.
+              </p>
+            </div>
+            <div>
+              <QuickContactForm />
+            </div>
+          </div>
         </div>
       </section>
     </Layout>

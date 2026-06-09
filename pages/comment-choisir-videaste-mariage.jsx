@@ -298,12 +298,24 @@ export default function CommentChoisir() {
 
       {/* CONTACT */}
       <section id="contact" style={{ padding: '72px 20px', background: 'linear-gradient(160deg, #0a0908, #080808)', borderTop: '1px solid rgba(201,169,110,0.15)' }}>
-        <div style={{ maxWidth: '640px', margin: '0 auto', textAlign: 'center' }}>
-          <h2 style={{ fontSize: 'clamp(24px, 4vw, 38px)', fontWeight: '400', color: CREAM, marginBottom: '14px' }}>Parlez-nous de votre mariage</h2>
-          <p style={{ fontSize: '15px', color: GRAY, marginBottom: '32px', lineHeight: '1.7' }}>
-            Devis gratuit, réponse sous 24h. Pas d'engagement jusqu'à la signature du contrat.
-          </p>
-          <QuickContactForm />
+        <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '60px', alignItems: 'start' }}>
+            <div>
+              <img
+                src="/images/about/eymeric-videaste-mariage-bretagne.webp"
+                alt="Eymeric, vidéaste mariage — répond personnellement sous 24h"
+                loading="lazy"
+                style={{ width: '100%', borderRadius: '8px', objectFit: 'cover', objectPosition: 'top', aspectRatio: '4/5', marginBottom: '28px', display: 'block' }}
+              />
+              <h2 style={{ fontSize: 'clamp(24px, 4vw, 38px)', fontWeight: '400', color: CREAM, marginBottom: '14px' }}>Parlez-nous de votre mariage</h2>
+              <p style={{ fontSize: '15px', color: GRAY, lineHeight: '1.7' }}>
+                Vous écrivez directement à Eymeric — pas un formulaire anonyme. Devis gratuit, réponse sous 24h.
+              </p>
+            </div>
+            <div>
+              <QuickContactForm />
+            </div>
+          </div>
         </div>
       </section>
     </Layout>
