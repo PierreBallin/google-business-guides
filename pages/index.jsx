@@ -154,6 +154,15 @@ export default function Home() {
               </Link>
             </div>
 
+            <div className="hero-ctas" style={{ marginTop: '32px', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '12px' }}>
+              <img
+                src="/images/about/eymeric-videaste-mariage-bretagne.webp"
+                alt="Eymeric, vidéaste mariage Bretagne"
+                style={{ width: '42px', height: '42px', borderRadius: '50%', objectFit: 'cover', objectPosition: 'top', border: '1.5px solid rgba(201,169,110,0.45)', flexShrink: 0 }}
+              />
+              <span style={{ fontSize: '13px', color: '#9ca3af', fontStyle: 'italic' }}>Eymeric — vidéaste mariage en Bretagne</span>
+            </div>
+
           </div>
         </div>
 
@@ -326,6 +335,23 @@ export default function Home() {
             <div style={{ fontSize: '11px', letterSpacing: '3px', color: GOLD, textTransform: 'uppercase', fontFamily: 'monospace', marginBottom: '12px' }}>Notre engagement</div>
             <h2 style={{ fontSize: 'clamp(24px, 4vw, 38px)', fontWeight: '400', color: CREAM }}>Ce qui nous rend différents</h2>
           </div>
+          <div className="reveal" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '40px', alignItems: 'center', marginBottom: '40px', paddingBottom: '40px', borderBottom: '1px solid rgba(201,169,110,0.08)' }}>
+            <img
+              src="/images/about/eymeric-videaste-mariage-bretagne.webp"
+              alt="Eymeric — vidéaste mariage professionnel en Bretagne (35, 44, 56)"
+              loading="lazy"
+              style={{ width: '100%', maxWidth: '360px', borderRadius: '8px', objectFit: 'cover', objectPosition: 'top', aspectRatio: '3/4', display: 'block' }}
+            />
+            <div>
+              <div style={{ fontSize: '11px', letterSpacing: '2px', color: GOLD, fontFamily: 'monospace', textTransform: 'uppercase', marginBottom: '16px' }}>Le vidéaste</div>
+              <p style={{ fontSize: 'clamp(17px, 2.5vw, 22px)', color: CREAM, lineHeight: '1.6', marginBottom: '16px', fontWeight: '400' }}>
+                Je filme des mariages en Bretagne depuis 2019. Je travaille seul — c'est moi qui réponds à vos messages, moi qui suis présent le jour J, et moi qui monte votre film.
+              </p>
+              <p style={{ fontSize: '15px', color: GRAY, lineHeight: '1.75' }}>
+                Pas d'intermédiaire, pas de surprise. Ce que vous voyez dans le portfolio, c'est exactement ce que vous aurez.
+              </p>
+            </div>
+          </div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '2px' }}>
             {[
               { label: 'Matériel double', text: 'Deux corps caméra sur chaque mariage. Si l\'un tombe en panne, la journée continue. Aucun couple ne nous a jamais attendu pour ça.', img: '/images/materiel/sony-alpha7iv-videaste-mariage-bretagne.webp', imgAlt: 'Sony Alpha 7 IV — boîtier utilisé pour filmer les mariages en Bretagne' },
@@ -377,18 +403,26 @@ export default function Home() {
 
       {/* CONTACT */}
       <section id="contact" style={{ padding: '80px 20px 100px', background: 'linear-gradient(160deg, #0a0908, #080808)', borderTop: '1px solid rgba(201,169,110,0.15)' }}>
-        <div style={{ maxWidth: '660px', margin: '0 auto', textAlign: 'center' }}>
-          <div className="reveal" style={{ marginBottom: '40px' }}>
-            <div style={{ fontSize: '11px', letterSpacing: '3px', color: GOLD, textTransform: 'uppercase', fontFamily: 'monospace', marginBottom: '20px' }}>Parlons de votre mariage</div>
-            <h2 style={{ fontSize: 'clamp(26px, 4vw, 44px)', fontWeight: '400', color: CREAM, marginBottom: '16px', lineHeight: '1.25' }}>
-              Votre date est-elle<br />encore disponible ?
-            </h2>
-            <p style={{ fontSize: '16px', color: GRAY, lineHeight: '1.7' }}>
-              Indiquez votre date et le lieu envisagé. Réponse garantie sous 24h.
-            </p>
-          </div>
-          <div className="reveal">
-            <QuickContactForm />
+        <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '60px', alignItems: 'start' }}>
+            <div className="reveal">
+              <img
+                src="/images/about/eymeric-videaste-mariage-bretagne.webp"
+                alt="Eymeric, vidéaste mariage — répond personnellement sous 24h"
+                loading="lazy"
+                style={{ width: '100%', borderRadius: '8px', objectFit: 'cover', objectPosition: 'top', aspectRatio: '4/5', marginBottom: '28px', display: 'block' }}
+              />
+              <div style={{ fontSize: '11px', letterSpacing: '3px', color: GOLD, textTransform: 'uppercase', fontFamily: 'monospace', marginBottom: '16px' }}>Parlons de votre mariage</div>
+              <h2 style={{ fontSize: 'clamp(24px, 4vw, 38px)', fontWeight: '400', color: CREAM, marginBottom: '16px', lineHeight: '1.25' }}>
+                Votre date est-elle<br />encore disponible ?
+              </h2>
+              <p style={{ fontSize: '15px', color: GRAY, lineHeight: '1.75' }}>
+                Vous écrivez directement à Eymeric — pas un formulaire anonyme. Réponse garantie sous 24h.
+              </p>
+            </div>
+            <div className="reveal">
+              <QuickContactForm />
+            </div>
           </div>
         </div>
       </section>
